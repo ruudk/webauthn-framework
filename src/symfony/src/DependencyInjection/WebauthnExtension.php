@@ -244,6 +244,7 @@ final class WebauthnExtension extends Extension implements PrependExtensionInter
                 null,
                 new Reference($creationCeremonyStepManagerId),
             ]);
+            $attestationResponseValidator->addTag(EventDispatcherSetterCompilerPass::TAG);
             $container->setDefinition($attestationResponseValidatorId, $attestationResponseValidator);
 
             $attestationResponseControllerId = sprintf('webauthn.controller.creation.response.%s', $name);
@@ -330,6 +331,7 @@ final class WebauthnExtension extends Extension implements PrependExtensionInter
                 null,
                 new Reference($requestCeremonyStepManagerId),
             ]);
+            $assertionResponseValidator->addTag(EventDispatcherSetterCompilerPass::TAG);
             $container->setDefinition($assertionResponseValidatorId, $assertionResponseValidator);
 
             $assertionResponseControllerId = sprintf('webauthn.controller.request.response.%s', $name);
@@ -355,6 +357,7 @@ final class WebauthnExtension extends Extension implements PrependExtensionInter
     }
 
     /**
+     * @deprecated since 4.9.0 and will be removed in 5.0.0. Android SafetyNet is now deprecated.
      * @param mixed[] $config
      */
     private function loadAndroidSafetyNet(ContainerBuilder $container, FileLoader $loader, array $config): void

@@ -7,6 +7,7 @@ namespace Webauthn\Tests\Bundle\Functional\Firewall;
 use ParagonIE\ConstantTime\Base64UrlSafe;
 use PHPUnit\Framework\Attributes\Test;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Webauthn\Bundle\Security\Storage\Item;
 use Webauthn\PublicKeyCredentialDescriptor;
@@ -26,7 +27,7 @@ final class SecuredAreaTest extends WebTestCase
         $client = static::createClient([], [
             'HTTPS' => 'on',
         ]);
-        $client->request('GET', '/admin', [], [], [
+        $client->request(Request::METHOD_GET, '/admin', [], [], [
             'HTTPS' => 'on',
         ]);
 
@@ -42,7 +43,7 @@ final class SecuredAreaTest extends WebTestCase
         $client = static::createClient([], [
             'HTTPS' => 'on',
         ]);
-        $client->request('POST', '/api/login/options', [], [], [
+        $client->request(Request::METHOD_POST, '/api/login/options', [], [], [
             'CONTENT_TYPE' => 'application/json',
             'HTTP_HOST' => 'test.com',
             'HTTPS' => 'on',
@@ -65,7 +66,7 @@ final class SecuredAreaTest extends WebTestCase
         $client = static::createClient([], [
             'HTTPS' => 'on',
         ]);
-        $client->request('POST', '/api/login', [], [], [
+        $client->request(Request::METHOD_POST, '/api/login', [], [], [
             'CONTENT_TYPE' => 'application/json',
             'HTTP_HOST' => 'test.com',
         ], $assertion);
@@ -107,7 +108,7 @@ final class SecuredAreaTest extends WebTestCase
 
         $assertion = '{"id":"eHouz_Zi7-BmByHjJ_tx9h4a1WZsK4IzUmgGjkhyOodPGAyUqUp_B9yUkflXY3yHWsNtsrgCXQ3HjAIFUeZB-w","type":"public-key","rawId":"eHouz/Zi7+BmByHjJ/tx9h4a1WZsK4IzUmgGjkhyOodPGAyUqUp/B9yUkflXY3yHWsNtsrgCXQ3HjAIFUeZB+w==","response":{"authenticatorData":"SZYN5YgOjGh0NBcPZHZgW4_krrmihjLHmVzzuoMdl2MBAAAAew","clientDataJSON":"eyJjaGFsbGVuZ2UiOiJHMEpiTExuZGVmM2EwSXkzUzJzU1FBOHVPNFNPX3plNkZaTUF1UEk2LXhJIiwiY2xpZW50RXh0ZW5zaW9ucyI6e30sImhhc2hBbGdvcml0aG0iOiJTSEEtMjU2Iiwib3JpZ2luIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6ODQ0MyIsInR5cGUiOiJ3ZWJhdXRobi5nZXQifQ","signature":"MEUCIEY/vcNkbo/LdMTfLa24ZYLlMMVMRd8zXguHBvqud9AJAiEAwCwpZpvcMaqCrwv85w/8RGiZzE+gOM61ffxmgEDeyhM=","userHandle":null}}';
 
-        $client->request('POST', '/api/login', [], [], [
+        $client->request(Request::METHOD_POST, '/api/login', [], [], [
             'CONTENT_TYPE' => 'application/json',
             'HTTP_HOST' => 'localhost',
         ], $assertion);
@@ -120,7 +121,7 @@ final class SecuredAreaTest extends WebTestCase
         );
         static::assertTrue($client->getRequest()->getSession()->has('_security_main'));
 
-        $client->request('GET', '/admin');
+        $client->request(Request::METHOD_GET, '/admin');
 
         static::assertSame('["Hello admin"]', $client->getResponse()->getContent());
         static::assertResponseIsSuccessful();
