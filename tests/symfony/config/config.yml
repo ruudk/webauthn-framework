@@ -131,6 +131,7 @@ webauthn:
     enabled: true
     creation:
       test:
+        hide_existing_credentials: true
         options_path: '/devices/add/options'
         result_path: '/devices/add'
         #host: null

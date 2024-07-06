@@ -54,7 +54,6 @@ final class AdditionalAuthenticatorTest extends WebTestCase
             'status',
             'errorMessage',
             'rp',
-            'pubKeyCredParams',
             'challenge',
             'attestation',
             'user',
@@ -64,6 +63,7 @@ final class AdditionalAuthenticatorTest extends WebTestCase
             static::assertArrayHasKey($expectedKey, $data);
         }
         static::assertSame('ok', $data['status']);
+        static::assertArrayNotHasKey('excludeCredentials', $data); // username enumeration prevention is enabled
     }
 
     #[Test]
