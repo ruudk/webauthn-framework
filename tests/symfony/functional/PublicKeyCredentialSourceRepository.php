@@ -38,6 +38,24 @@ final class PublicKeyCredentialSourceRepository implements PublicKeyCredentialSo
             100
         );
         $this->saveCredentialSource($publicKeyCredentialSource1);
+        $publicKeyCredentialSource2 = PublicKeyCredentialSource::create(
+            base64_decode(
+                'Ac8zKrpVWv9UCwxY1FyMqkESz2lV4CNwTk2+Hp19LgKbvh5uQ2/i6AMbTbTz1zcNapCEeiLJPlAAVM4L7AIow6I=',
+                true
+            ),
+            PublicKeyCredentialDescriptor::CREDENTIAL_TYPE_PUBLIC_KEY,
+            [],
+            AttestationStatement::TYPE_NONE,
+            EmptyTrustPath::create(),
+            Uuid::fromBinary(base64_decode('AAAAAAAAAAAAAAAAAAAAAA==', true)),
+            base64_decode(
+                'pQECAyYgASFYIJV56vRrFusoDf9hm3iDmllcxxXzzKyO9WruKw4kWx7zIlgg/nq63l8IMJcIdKDJcXRh9hoz0L+nVwP1Oxil3/oNQYs=',
+                true
+            ),
+            '929fba2f-2361-4bc6-a917-bb76aa14c7f9',
+            100
+        );
+        $this->saveCredentialSource($publicKeyCredentialSource2);
     }
 
     public function findOneByCredentialId(string $publicKeyCredentialId): ?PublicKeyCredentialSource
