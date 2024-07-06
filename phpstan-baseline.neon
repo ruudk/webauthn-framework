@@ -693,6 +693,11 @@ parameters:
 			path: src/symfony/src/Controller/AttestationControllerFactory.php
 
 		-
+			message: "#^Method Webauthn\\\\Bundle\\\\CredentialOptionsBuilder\\\\PublicKeyCredentialCreationOptionsBuilder\\:\\:getFromRequest\\(\\) invoked with 3 parameters, 2 required\\.$#"
+			count: 1
+			path: src/symfony/src/Controller/AttestationRequestController.php
+
+		-
 			message: "#^Call to an undefined method Symfony\\\\Component\\\\HttpFoundation\\\\Request\\:\\:getContentType\\(\\)\\.$#"
 			count: 1
 			path: src/symfony/src/Controller/AttestationResponseController.php
@@ -804,11 +809,6 @@ parameters:
 
 		-
 			message: "#^Parameter \\$credentialSourceRepository of method Webauthn\\\\Bundle\\\\CredentialOptionsBuilder\\\\ProfileBasedRequestOptionsBuilder\\:\\:__construct\\(\\) has typehint with deprecated interface Webauthn\\\\PublicKeyCredentialSourceRepository\\.$#"
-			count: 1
-			path: src/symfony/src/CredentialOptionsBuilder/ProfileBasedRequestOptionsBuilder.php
-
-		-
-			message: "#^Should not use function \"dump\", please change the code\\.$#"
 			count: 1
 			path: src/symfony/src/CredentialOptionsBuilder/ProfileBasedRequestOptionsBuilder.php
 
@@ -1059,6 +1059,11 @@ parameters:
 		-
 			message: "#^Cannot access offset 'failure_handler' on mixed\\.$#"
 			count: 4
+			path: src/symfony/src/DependencyInjection/WebauthnExtension.php
+
+		-
+			message: "#^Cannot access offset 'hide_existing…' on mixed\\.$#"
+			count: 1
 			path: src/symfony/src/DependencyInjection/WebauthnExtension.php
 
 		-
