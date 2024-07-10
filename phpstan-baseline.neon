@@ -1178,6 +1178,14 @@ parameters:
 
 		-
 			message: """
+				#^Fetching class constant class of deprecated class Webauthn\\\\Bundle\\\\Doctrine\\\\Type\\\\PublicKeyCredentialDescriptorCollectionType\\:
+				since 4\\.9\\.0 and will be removed in 5\\.0\\.0\\.$#
+			"""
+			count: 1
+			path: src/symfony/src/DependencyInjection/WebauthnExtension.php
+
+		-
+			message: """
 				#^Fetching class constant class of deprecated interface Webauthn\\\\Bundle\\\\Repository\\\\PublicKeyCredentialUserEntityRepository\\:
 				since 4\\.6\\.0, to be removed in 5\\.0\\.0\\. Use \\{@link PublicKeyCredentialUserEntityRepositoryInterface\\} and \\{@link CanRegisterUserEntity\\} instead\\.$#
 			"""
@@ -1248,12 +1256,17 @@ parameters:
 			path: src/symfony/src/Doctrine/Type/AAGUIDDataType.php
 
 		-
-			message: "#^Cannot cast mixed to string\\.$#"
+			message: "#^Method Webauthn\\\\Bundle\\\\Doctrine\\\\Type\\\\AttestedCredentialDataType\\:\\:convertToDatabaseValue\\(\\) should return string\\|null but returns mixed\\.$#"
 			count: 1
 			path: src/symfony/src/Doctrine/Type/AttestedCredentialDataType.php
 
 		-
-			message: "#^Parameter \\#1 \\$json of static method Webauthn\\\\AttestedCredentialData\\:\\:createFromArray\\(\\) expects array, mixed given\\.$#"
+			message: "#^Method Webauthn\\\\Bundle\\\\Doctrine\\\\Type\\\\AttestedCredentialDataType\\:\\:convertToPHPValue\\(\\) should return Webauthn\\\\AttestedCredentialData\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/symfony/src/Doctrine/Type/AttestedCredentialDataType.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of method Webauthn\\\\Bundle\\\\Doctrine\\\\Type\\\\AttestedCredentialDataType\\:\\:deserialize\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: src/symfony/src/Doctrine/Type/AttestedCredentialDataType.php
 
@@ -1298,17 +1311,32 @@ parameters:
 			path: src/symfony/src/Doctrine/Type/PublicKeyCredentialDescriptorCollection.php
 
 		-
-			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\PublicKeyCredentialDescriptor\\:\\:createFromString\\(\\) expects string, mixed given\\.$#"
+			message: "#^Method Webauthn\\\\Bundle\\\\Doctrine\\\\Type\\\\PublicKeyCredentialDescriptorType\\:\\:convertToDatabaseValue\\(\\) should return string\\|null but returns mixed\\.$#"
 			count: 1
 			path: src/symfony/src/Doctrine/Type/PublicKeyCredentialDescriptorType.php
 
 		-
-			message: "#^Cannot cast mixed to string\\.$#"
+			message: "#^Method Webauthn\\\\Bundle\\\\Doctrine\\\\Type\\\\PublicKeyCredentialDescriptorType\\:\\:convertToPHPValue\\(\\) should return Webauthn\\\\PublicKeyCredentialDescriptor\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/symfony/src/Doctrine/Type/PublicKeyCredentialDescriptorType.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of method Webauthn\\\\Bundle\\\\Doctrine\\\\Type\\\\PublicKeyCredentialDescriptorType\\:\\:deserialize\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/symfony/src/Doctrine/Type/PublicKeyCredentialDescriptorType.php
+
+		-
+			message: "#^Method Webauthn\\\\Bundle\\\\Doctrine\\\\Type\\\\TrustPathDataType\\:\\:convertToDatabaseValue\\(\\) should return string\\|null but returns mixed\\.$#"
 			count: 1
 			path: src/symfony/src/Doctrine/Type/TrustPathDataType.php
 
 		-
-			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\TrustPath\\\\TrustPathLoader\\:\\:loadTrustPath\\(\\) expects array, mixed given\\.$#"
+			message: "#^Method Webauthn\\\\Bundle\\\\Doctrine\\\\Type\\\\TrustPathDataType\\:\\:convertToPHPValue\\(\\) should return Webauthn\\\\TrustPath\\\\TrustPath\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/symfony/src/Doctrine/Type/TrustPathDataType.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of method Webauthn\\\\Bundle\\\\Doctrine\\\\Type\\\\TrustPathDataType\\:\\:deserialize\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: src/symfony/src/Doctrine/Type/TrustPathDataType.php
 
@@ -3402,14 +3430,6 @@ parameters:
 			message: "#^Parameter \\#1 \\$ecdaaKeyId of class Webauthn\\\\TrustPath\\\\EcdaaKeyIdTrustPath constructor expects string, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/TrustPath/EcdaaKeyIdTrustPath.php
-
-		-
-			message: """
-				#^Instantiation of deprecated class Webauthn\\\\TrustPath\\\\EcdaaKeyIdTrustPath\\:
-				since 4\\.2\\.0 and will be removed in 5\\.0\\.0\\. The ECDAA Trust Anchor does no longer exist in Webauthn specification\\.$#
-			"""
-			count: 1
-			path: src/webauthn/src/TrustPath/TrustPathLoader.php
 
 		-
 			message: "#^Parameter \\#1 \\$certificates of static method Webauthn\\\\TrustPath\\\\CertificateTrustPath\\:\\:create\\(\\) expects array\\<string\\>, array given\\.$#"
