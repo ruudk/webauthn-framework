@@ -3432,6 +3432,14 @@ parameters:
 			path: src/webauthn/src/TrustPath/EcdaaKeyIdTrustPath.php
 
 		-
+			message: """
+				#^Instantiation of deprecated class Webauthn\\\\TrustPath\\\\EcdaaKeyIdTrustPath\\:
+				since 4\\.2\\.0 and will be removed in 5\\.0\\.0\\. The ECDAA Trust Anchor does no longer exist in Webauthn specification\\.$#
+			"""
+			count: 1
+			path: src/webauthn/src/TrustPath/TrustPathLoader.php
+
+		-
 			message: "#^Parameter \\#1 \\$certificates of static method Webauthn\\\\TrustPath\\\\CertificateTrustPath\\:\\:create\\(\\) expects array\\<string\\>, array given\\.$#"
 			count: 1
 			path: src/webauthn/src/TrustPath/TrustPathLoader.php
