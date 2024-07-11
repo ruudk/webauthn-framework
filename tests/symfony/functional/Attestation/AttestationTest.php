@@ -11,7 +11,7 @@ use Webauthn\AttestationStatement\AttestationStatement;
 use Webauthn\AuthenticatorAttestationResponse;
 use Webauthn\AuthenticatorAttestationResponseValidator;
 use Webauthn\Bundle\Service\PublicKeyCredentialCreationOptionsFactory;
-use Webauthn\MetadataService\Exception\CertificateChainException;
+use Webauthn\Exception\CertificateChainException;
 use Webauthn\PublicKeyCredential;
 use Webauthn\PublicKeyCredentialCreationOptions;
 use Webauthn\PublicKeyCredentialDescriptor;
