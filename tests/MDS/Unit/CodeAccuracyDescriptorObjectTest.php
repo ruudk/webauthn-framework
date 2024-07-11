@@ -8,7 +8,7 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
-use Webauthn\MetadataService\Exception\MetadataStatementLoadingException;
+use Webauthn\Exception\MetadataStatementLoadingException;
 use Webauthn\MetadataService\Statement\CodeAccuracyDescriptor;
 
 /**
