@@ -6,7 +6,7 @@ namespace Webauthn\Tests\MetadataService\Unit;
 
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
-use Webauthn\MetadataService\Exception\MetadataStatementLoadingException;
+use Webauthn\Exception\MetadataStatementLoadingException;
 use Webauthn\MetadataService\Statement\DisplayPNGCharacteristicsDescriptor;
 
 /**

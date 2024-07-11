@@ -1,684 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Parameter \\#2 \\$array of function array_map expects array, iterable\\<string\\> given\\.$#"
-			count: 1
-			path: src/metadata-service/src/CertificateChain/CertificateToolbox.php
-
-		-
-			message: "#^Call to an undefined method Psr\\\\Http\\\\Client\\\\ClientInterface\\|Symfony\\\\Contracts\\\\HttpClient\\\\HttpClientInterface\\:\\:sendRequest\\(\\)\\.$#"
-			count: 1
-			path: src/metadata-service/src/CertificateChain/PhpCertificateChainValidator.php
-
-		-
-			message: "#^Cannot call method createRequest\\(\\) on Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\|null\\.$#"
-			count: 1
-			path: src/metadata-service/src/CertificateChain/PhpCertificateChainValidator.php
-
-		-
-			message: "#^Parameter \\#1 \\$untrustedCertificates of static method Webauthn\\\\MetadataService\\\\Exception\\\\CertificateChainException\\:\\:create\\(\\) expects array\\<string\\>, array\\<SpomkyLabs\\\\Pki\\\\X509\\\\Certificate\\\\Certificate\\> given\\.$#"
-			count: 2
-			path: src/metadata-service/src/CertificateChain/PhpCertificateChainValidator.php
-
-		-
-			message: "#^Parameter \\#2 \\$trustedCertificates of static method Webauthn\\\\MetadataService\\\\Exception\\\\CertificateChainException\\:\\:create\\(\\) expects array\\<string\\>, array\\<int, SpomkyLabs\\\\Pki\\\\X509\\\\Certificate\\\\Certificate\\> given\\.$#"
-			count: 2
-			path: src/metadata-service/src/CertificateChain/PhpCertificateChainValidator.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\ExtensionDescriptorDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/ExtensionDescriptorDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\ExtensionDescriptorDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/ExtensionDescriptorDenormalizer.php
-
-		-
-			message: "#^Parameter \\#2 \\$array of function array_key_exists expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/ExtensionDescriptorDenormalizer.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between Symfony\\\\Component\\\\Serializer\\\\Normalizer\\\\DenormalizerInterface and null will always evaluate to false\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/ExtensionDescriptorDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) never returns ArrayObject so it can be removed from the return type\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) never returns bool so it can be removed from the return type\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) never returns float so it can be removed from the return type\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) never returns int so it can be removed from the return type\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) never returns null so it can be removed from the return type\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) never returns string so it can be removed from the return type\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) return type has no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) return type with generic class ArrayObject does not specify its types\\: TKey, TValue$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Psr18HttpClient\\:\\:request\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Psr18HttpClient.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Psr18HttpClient\\:\\:withOptions\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Psr18HttpClient.php
-
-		-
-			message: "#^Property Webauthn\\\\MetadataService\\\\Psr18HttpClient\\:\\:\\$options type has no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Psr18HttpClient.php
-
-		-
-			message: "#^Call to an undefined method Psr\\\\Http\\\\Client\\\\ClientInterface\\|Symfony\\\\Contracts\\\\HttpClient\\\\HttpClientInterface\\:\\:request\\(\\)\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/DistantResourceMetadataService.php
-
-		-
-			message: "#^Call to an undefined method Psr\\\\Http\\\\Client\\\\ClientInterface\\|Symfony\\\\Contracts\\\\HttpClient\\\\HttpClientInterface\\:\\:sendRequest\\(\\)\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/DistantResourceMetadataService.php
-
-		-
-			message: """
-				#^Call to deprecated method createFromString\\(\\) of class Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:
-				since 4\\.7\\.0\\. Please use the symfony/serializer for converting the object\\.$#
-			"""
-			count: 1
-			path: src/metadata-service/src/Service/DistantResourceMetadataService.php
-
-		-
-			message: "#^Cannot call method createRequest\\(\\) on Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\|null\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/DistantResourceMetadataService.php
-
-		-
-			message: "#^Parameter \\#5 \\$additionalHeaderParameters of class Webauthn\\\\MetadataService\\\\Service\\\\DistantResourceMetadataService constructor expects array\\<string, string\\>, array\\<string, mixed\\> given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/DistantResourceMetadataService.php
-
-		-
-			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/FidoAllianceCompliantMetadataService.php
-
-		-
-			message: "#^Call to an undefined method Psr\\\\Http\\\\Client\\\\ClientInterface\\|Symfony\\\\Contracts\\\\HttpClient\\\\HttpClientInterface\\:\\:request\\(\\)\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/FidoAllianceCompliantMetadataService.php
-
-		-
-			message: "#^Call to an undefined method Psr\\\\Http\\\\Client\\\\ClientInterface\\|Symfony\\\\Contracts\\\\HttpClient\\\\HttpClientInterface\\:\\:sendRequest\\(\\)\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/FidoAllianceCompliantMetadataService.php
-
-		-
-			message: """
-				#^Call to deprecated method createFromArray\\(\\) of class Webauthn\\\\MetadataService\\\\Service\\\\MetadataBLOBPayloadEntry\\:
-				since 4\\.7\\.0\\. Please use the symfony/serializer for converting the object\\.$#
-			"""
-			count: 1
-			path: src/metadata-service/src/Service/FidoAllianceCompliantMetadataService.php
-
-		-
-			message: "#^Cannot access offset 'entries' on mixed\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/FidoAllianceCompliantMetadataService.php
-
-		-
-			message: "#^Cannot call method createRequest\\(\\) on Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\|null\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/FidoAllianceCompliantMetadataService.php
-
-		-
-			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Service\\\\MetadataBLOBPayloadEntry\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/FidoAllianceCompliantMetadataService.php
-
-		-
-			message: "#^Parameter \\#2 \\$headerParameters of method Webauthn\\\\MetadataService\\\\Service\\\\FidoAllianceCompliantMetadataService\\:\\:sendPsrRequest\\(\\) expects array\\<string, string\\>, array\\<string, mixed\\> given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/FidoAllianceCompliantMetadataService.php
-
-		-
-			message: "#^Parameter \\#2 \\$headerParameters of method Webauthn\\\\MetadataService\\\\Service\\\\FidoAllianceCompliantMetadataService\\:\\:sendSymfonyRequest\\(\\) expects array\\<string, string\\>, array\\<string, mixed\\> given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/FidoAllianceCompliantMetadataService.php
-
-		-
-			message: "#^Parameter &\\$rootCertificates by\\-ref type of method Webauthn\\\\MetadataService\\\\Service\\\\FidoAllianceCompliantMetadataService\\:\\:getJwsPayload\\(\\) expects array\\<string\\>, array given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/FidoAllianceCompliantMetadataService.php
-
-		-
-			message: """
-				#^Call to deprecated method createFromString\\(\\) of class Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:
-				since 4\\.7\\.0\\. Please use the symfony/serializer for converting the object\\.$#
-			"""
-			count: 1
-			path: src/metadata-service/src/Service/FolderResourceMetadataService.php
-
-		-
-			message: "#^Parameter \\#1 \\$string of function trim expects string, string\\|false given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/FolderResourceMetadataService.php
-
-		-
-			message: """
-				#^Call to deprecated method createFromString\\(\\) of class Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:
-				since 4\\.7\\.0\\. Please use the symfony/serializer for converting the object\\.$#
-			"""
-			count: 1
-			path: src/metadata-service/src/Service/JsonMetadataService.php
-
-		-
-			message: """
-				#^Call to deprecated method createFromString\\(\\) of class Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:
-				since 4\\.7\\.0\\. Please use the symfony/serializer for converting the object\\.$#
-			"""
-			count: 1
-			path: src/metadata-service/src/Service/LocalResourceMetadataService.php
-
-		-
-			message: "#^Parameter \\#1 \\$encodedString of static method ParagonIE\\\\ConstantTime\\\\Base64\\:\\:decode\\(\\) expects string, string\\|false given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/LocalResourceMetadataService.php
-
-		-
-			message: "#^Parameter \\#1 \\$statement of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:createFromString\\(\\) expects string, string\\|false given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/LocalResourceMetadataService.php
-
-		-
-			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Service\\\\MetadataBLOBPayloadEntry\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/MetadataBLOBPayload.php
-
-		-
-			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: Webauthn\\\\MetadataService\\\\Statement\\\\StatusReport given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Service/MetadataBLOBPayloadEntry.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\AuthenticatorGetInfo\\:\\:jsonSerialize\\(\\) should return array\\<string\\> but returns array\\<int\\|string, mixed\\>\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/AuthenticatorGetInfo.php
-
-		-
-			message: "#^Parameter \\#1 \\$selfAttestedFRR of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricAccuracyDescriptor\\:\\:create\\(\\) expects float\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricAccuracyDescriptor.php
-
-		-
-			message: "#^Parameter \\#2 \\$selfAttestedFAR of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricAccuracyDescriptor\\:\\:create\\(\\) expects float\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricAccuracyDescriptor.php
-
-		-
-			message: "#^Parameter \\#3 \\$maxTemplates of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricAccuracyDescriptor\\:\\:create\\(\\) expects float\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricAccuracyDescriptor.php
-
-		-
-			message: "#^Parameter \\#4 \\$maxRetries of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricAccuracyDescriptor\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricAccuracyDescriptor.php
-
-		-
-			message: "#^Parameter \\#5 \\$blockSlowdown of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricAccuracyDescriptor\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricAccuracyDescriptor.php
-
-		-
-			message: "#^Parameter \\#1 \\$certLevel of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricStatusReport.php
-
-		-
-			message: "#^Parameter \\#2 \\$modality of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricStatusReport.php
-
-		-
-			message: "#^Parameter \\#3 \\$effectiveDate of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricStatusReport.php
-
-		-
-			message: "#^Parameter \\#4 \\$certificationDescriptor of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricStatusReport.php
-
-		-
-			message: "#^Parameter \\#5 \\$certificateNumber of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricStatusReport.php
-
-		-
-			message: "#^Parameter \\#6 \\$certificationPolicyVersion of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricStatusReport.php
-
-		-
-			message: "#^Parameter \\#7 \\$certificationRequirementsVersion of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/BiometricStatusReport.php
-
-		-
-			message: "#^Parameter \\#1 \\$base of static method Webauthn\\\\MetadataService\\\\Statement\\\\CodeAccuracyDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/CodeAccuracyDescriptor.php
-
-		-
-			message: "#^Parameter \\#2 \\$minLength of static method Webauthn\\\\MetadataService\\\\Statement\\\\CodeAccuracyDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/CodeAccuracyDescriptor.php
-
-		-
-			message: "#^Parameter \\#3 \\$maxRetries of static method Webauthn\\\\MetadataService\\\\Statement\\\\CodeAccuracyDescriptor\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/CodeAccuracyDescriptor.php
-
-		-
-			message: "#^Parameter \\#4 \\$blockSlowdown of static method Webauthn\\\\MetadataService\\\\Statement\\\\CodeAccuracyDescriptor\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/CodeAccuracyDescriptor.php
-
-		-
-			message: "#^@readonly property Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:\\$plte is assigned outside of the constructor\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/DisplayPNGCharacteristicsDescriptor.php
-
-		-
-			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: Webauthn\\\\MetadataService\\\\Statement\\\\RgbPaletteEntry given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/DisplayPNGCharacteristicsDescriptor.php
-
-		-
-			message: "#^Parameter \\#1 \\$width of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/DisplayPNGCharacteristicsDescriptor.php
-
-		-
-			message: "#^Parameter \\#2 \\$array of function array_map expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/DisplayPNGCharacteristicsDescriptor.php
-
-		-
-			message: "#^Parameter \\#2 \\$height of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/DisplayPNGCharacteristicsDescriptor.php
-
-		-
-			message: "#^Parameter \\#3 \\$bitDepth of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/DisplayPNGCharacteristicsDescriptor.php
-
-		-
-			message: "#^Parameter \\#4 \\$colorType of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/DisplayPNGCharacteristicsDescriptor.php
-
-		-
-			message: "#^Parameter \\#5 \\$compression of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/DisplayPNGCharacteristicsDescriptor.php
-
-		-
-			message: "#^Parameter \\#6 \\$filter of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/DisplayPNGCharacteristicsDescriptor.php
-
-		-
-			message: "#^Parameter \\#7 \\$interlace of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/DisplayPNGCharacteristicsDescriptor.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\EcdaaTrustAnchor\\:\\:jsonSerialize\\(\\) should return array\\<string, string\\> but returns array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/EcdaaTrustAnchor.php
-
-		-
-			message: "#^Parameter \\#1 \\$encodedString of static method ParagonIE\\\\ConstantTime\\\\Base64\\:\\:decode\\(\\) expects string, mixed given\\.$#"
-			count: 5
-			path: src/metadata-service/src/Statement/EcdaaTrustAnchor.php
-
-		-
-			message: "#^Parameter \\#6 \\$G1Curve of class Webauthn\\\\MetadataService\\\\Statement\\\\EcdaaTrustAnchor constructor expects string, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/EcdaaTrustAnchor.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:__construct\\(\\) has parameter \\$tcDisplayPNGCharacteristics with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$alternativeDescriptions with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$attachmentHint with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$attestationCertificateKeyIdentifiers with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$attestationRootCertificates with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$attestationTypes with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$authenticationAlgorithms with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$ecdaaTrustAnchors with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$keyProtection with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$matcherProtection with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$publicKeyAlgAndEncodings with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$supportedExtensions with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$tcDisplay with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$tcDisplayPNGCharacteristics with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$upv with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$userVerificationDetails with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\CertificateChain\\\\CertificateToolbox\\:\\:fixPEMStructures\\(\\) expects array\\<string\\>, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Statement\\\\ExtensionDescriptor\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Statement\\\\VerificationMethodANDCombinations\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, array given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Statement\\\\Version\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, array given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#1 \\$description of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#1 \\$info of static method Webauthn\\\\MetadataService\\\\Statement\\\\AuthenticatorGetInfo\\:\\:create\\(\\) expects array\\<int\\|string, mixed\\>, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#10 \\$matcherProtection of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#11 \\$tcDisplay of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#13 \\$alternativeDescriptions of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#14 \\$legalHeader of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#15 \\$aaid of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#16 \\$aaguid of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#17 \\$attestationCertificateKeyIdentifiers of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#18 \\$keyProtection of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#19 \\$isKeyRestricted of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects bool\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#2 \\$array of function array_map expects array, mixed given\\.$#"
-			count: 4
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#2 \\$authenticatorVersion of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#20 \\$isFreshUserVerificationRequired of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects bool\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#21 \\$cryptoStrength of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#22 \\$attachmentHint of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#23 \\$tcDisplayContentType of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#25 \\$ecdaaTrustAnchors of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#26 \\$icon of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#3 \\$protocolFamily of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#4 \\$schema of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#6 \\$authenticationAlgorithms of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#7 \\$publicKeyAlgAndEncodings of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Parameter \\#8 \\$attestationTypes of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: """
-				#^Parameter \\$ecdaaTrustAnchors of method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:__construct\\(\\) has typehint with deprecated class Webauthn\\\\MetadataService\\\\Statement\\\\EcdaaTrustAnchor\\:
-				since 4\\.2\\.0 and will be removed in 5\\.0\\.0\\. The ECDAA Trust Anchor does no longer exist in Webauthn specification\\.$#
-			"""
-			count: 1
-			path: src/metadata-service/src/Statement/MetadataStatement.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\PatternAccuracyDescriptor\\:\\:jsonSerialize\\(\\) should return array\\<string, int\\|null\\> but returns array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/PatternAccuracyDescriptor.php
-
-		-
-			message: "#^Parameter \\#1 \\$r of static method Webauthn\\\\MetadataService\\\\Statement\\\\RgbPaletteEntry\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/RgbPaletteEntry.php
-
-		-
-			message: "#^Parameter \\#2 \\$g of static method Webauthn\\\\MetadataService\\\\Statement\\\\RgbPaletteEntry\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/RgbPaletteEntry.php
-
-		-
-			message: "#^Parameter \\#3 \\$b of static method Webauthn\\\\MetadataService\\\\Statement\\\\RgbPaletteEntry\\:\\:create\\(\\) expects int, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/RgbPaletteEntry.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between mixed and null will always evaluate to false\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/StatusReport.php
-
-		-
-			message: "#^@readonly property Webauthn\\\\MetadataService\\\\Statement\\\\VerificationMethodANDCombinations\\:\\:\\$verificationMethods is assigned outside of the constructor\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/VerificationMethodANDCombinations.php
-
-		-
-			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: Webauthn\\\\MetadataService\\\\Statement\\\\VerificationMethodDescriptor given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/VerificationMethodANDCombinations.php
-
-		-
-			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\Version\\:\\:jsonSerialize\\(\\) should return array\\<string, int\\|null\\> but returns array\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/Version.php
-
-		-
-			message: "#^Parameter \\#1 \\$major of static method Webauthn\\\\MetadataService\\\\Statement\\\\Version\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/Version.php
-
-		-
-			message: "#^Parameter \\#2 \\$minor of static method Webauthn\\\\MetadataService\\\\Statement\\\\Version\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
-			count: 1
-			path: src/metadata-service/src/Statement/Version.php
-
-		-
 			message: "#^Cannot access offset 'FrameworkBundle' on array\\|bool\\|float\\|int\\|string\\|UnitEnum\\.$#"
 			count: 1
 			path: src/stimulus/src/DependencyInjection/WebauthnStimulusExtension.php
@@ -1362,6 +684,14 @@ parameters:
 			"""
 			count: 1
 			path: src/symfony/src/Resources/config/android_safetynet.php
+
+		-
+			message: """
+				#^Fetching class constant class of deprecated class Webauthn\\\\MetadataService\\\\Denormalizer\\\\MetadataStatementSerializerFactory\\:
+				since 4\\.9\\.0 and will be removed in 5\\.0\\.0\\. Use Webauthn\\\\Denormalizer\\\\WebauthnSerializerFactory instead$#
+			"""
+			count: 1
+			path: src/symfony/src/Resources/config/services.php
 
 		-
 			message: """
@@ -2505,22 +1835,12 @@ parameters:
 			path: src/webauthn/src/Denormalizer/AttestedCredentialDataNormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AttestedCredentialDataNormalizer\\:\\:normalize\\(\\) return type has no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AttestedCredentialDataNormalizer.php
-
-		-
 			message: "#^Method Webauthn\\\\Denormalizer\\\\AttestedCredentialDataNormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/AttestedCredentialDataNormalizer.php
 
 		-
 			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticationExtensionNormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticationExtensionNormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticationExtensionNormalizer\\:\\:normalize\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/AuthenticationExtensionNormalizer.php
 
@@ -2557,11 +1877,6 @@ parameters:
 
 		-
 			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticationExtensionsDenormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticationExtensionsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticationExtensionsDenormalizer\\:\\:normalize\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/AuthenticationExtensionsDenormalizer.php
 
@@ -2776,6 +2091,21 @@ parameters:
 			path: src/webauthn/src/Denormalizer/CollectedClientDataDenormalizer.php
 
 		-
+			message: "#^Method Webauthn\\\\Denormalizer\\\\ExtensionDescriptorDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/Denormalizer/ExtensionDescriptorDenormalizer.php
+
+		-
+			message: "#^Method Webauthn\\\\Denormalizer\\\\ExtensionDescriptorDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/Denormalizer/ExtensionDescriptorDenormalizer.php
+
+		-
+			message: "#^Parameter \\#2 \\$array of function array_key_exists expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/Denormalizer/ExtensionDescriptorDenormalizer.php
+
+		-
 			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialDenormalizer.php
@@ -2797,11 +2127,6 @@ parameters:
 
 		-
 			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialDescriptorNormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialDescriptorNormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialDescriptorNormalizer\\:\\:normalize\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialDescriptorNormalizer.php
 
@@ -2897,11 +2222,6 @@ parameters:
 
 		-
 			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialOptionsDenormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialOptionsDenormalizer\\:\\:normalize\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
 
@@ -3091,11 +2411,6 @@ parameters:
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialSourceDenormalizer\\:\\:normalize\\(\\) return type has no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
-
-		-
 			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialSourceDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
@@ -3191,11 +2506,6 @@ parameters:
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialUserEntityDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialUserEntityDenormalizer\\:\\:normalize\\(\\) return type has no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialUserEntityDenormalizer.php
-
-		-
 			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialUserEntityDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialUserEntityDenormalizer.php
@@ -3234,11 +2544,6 @@ parameters:
 			path: src/webauthn/src/Denormalizer/TrustPathDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\TrustPathDenormalizer\\:\\:normalize\\(\\) return type has no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/TrustPathDenormalizer.php
-
-		-
 			message: "#^Method Webauthn\\\\Denormalizer\\\\TrustPathDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/TrustPathDenormalizer.php
@@ -3257,6 +2562,689 @@ parameters:
 			message: "#^Parameter \\#2 \\$array of function array_key_exists expects array, mixed given\\.$#"
 			count: 2
 			path: src/webauthn/src/Denormalizer/TrustPathDenormalizer.php
+
+		-
+			message: "#^Method Webauthn\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
+
+		-
+			message: "#^Method Webauthn\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) should return array\\<Webauthn\\\\MetadataService\\\\Statement\\\\VerificationMethodDescriptor\\> but returns array\\<array\\|ArrayObject\\|bool\\|float\\|int\\|string\\|null\\>\\.$#"
+			count: 1
+			path: src/webauthn/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
+
+		-
+			message: "#^Method Webauthn\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
+
+		-
+			message: "#^Parameter \\#2 \\$array of function array_map expects array, iterable\\<string\\> given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/CertificateChain/CertificateToolbox.php
+
+		-
+			message: "#^Call to an undefined method Psr\\\\Http\\\\Client\\\\ClientInterface\\|Symfony\\\\Contracts\\\\HttpClient\\\\HttpClientInterface\\:\\:sendRequest\\(\\)\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/CertificateChain/PhpCertificateChainValidator.php
+
+		-
+			message: "#^Cannot call method createRequest\\(\\) on Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\|null\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/CertificateChain/PhpCertificateChainValidator.php
+
+		-
+			message: "#^Parameter \\#1 \\$untrustedCertificates of static method Webauthn\\\\Exception\\\\CertificateChainException\\:\\:create\\(\\) expects array\\<string\\>, array\\<SpomkyLabs\\\\Pki\\\\X509\\\\Certificate\\\\Certificate\\> given\\.$#"
+			count: 2
+			path: src/webauthn/src/MetadataService/CertificateChain/PhpCertificateChainValidator.php
+
+		-
+			message: "#^Parameter \\#2 \\$trustedCertificates of static method Webauthn\\\\Exception\\\\CertificateChainException\\:\\:create\\(\\) expects array\\<string\\>, array\\<int, SpomkyLabs\\\\Pki\\\\X509\\\\Certificate\\\\Certificate\\> given\\.$#"
+			count: 2
+			path: src/webauthn/src/MetadataService/CertificateChain/PhpCertificateChainValidator.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Denormalizer\\\\ExtensionDescriptorDenormalizer extends @final class Webauthn\\\\Denormalizer\\\\ExtensionDescriptorDenormalizer\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Denormalizer/ExtensionDescriptorDenormalizer.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Event\\\\BeforeCertificateChainValidation extends @final class Webauthn\\\\Event\\\\BeforeCertificateChainValidation\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Event/BeforeCertificateChainValidation.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Event\\\\CertificateChainValidationFailed extends @final class Webauthn\\\\Event\\\\CertificateChainValidationFailed\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Event/CertificateChainValidationFailed.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Event\\\\CertificateChainValidationSucceeded extends @final class Webauthn\\\\Event\\\\CertificateChainValidationSucceeded\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Event/CertificateChainValidationSucceeded.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Event\\\\MetadataStatementFound extends @final class Webauthn\\\\Event\\\\MetadataStatementFound\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Event/MetadataStatementFound.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Event\\\\NullEventDispatcher extends @final class Webauthn\\\\Event\\\\NullEventDispatcher\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Event/NullEventDispatcher.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Exception\\\\CertificateRevocationListException extends @final class Webauthn\\\\Exception\\\\CertificateRevocationListException\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Exception/CertificateRevocationListException.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Exception\\\\ExpiredCertificateException extends @final class Webauthn\\\\Exception\\\\ExpiredCertificateException\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Exception/ExpiredCertificateException.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Exception\\\\InvalidCertificateException extends @final class Webauthn\\\\Exception\\\\InvalidCertificateException\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Exception/InvalidCertificateException.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Exception\\\\MetadataStatementLoadingException extends @final class Webauthn\\\\Exception\\\\MetadataStatementLoadingException\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Exception/MetadataStatementLoadingException.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Exception\\\\MissingMetadataStatementException extends @final class Webauthn\\\\Exception\\\\MissingMetadataStatementException\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Exception/MissingMetadataStatementException.php
+
+		-
+			message: "#^Class Webauthn\\\\MetadataService\\\\Exception\\\\RevokedCertificateException extends @final class Webauthn\\\\Exception\\\\RevokedCertificateException\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Exception/RevokedCertificateException.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Psr18HttpClient\\:\\:request\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Psr18HttpClient.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Psr18HttpClient\\:\\:withOptions\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Psr18HttpClient.php
+
+		-
+			message: "#^Property Webauthn\\\\MetadataService\\\\Psr18HttpClient\\:\\:\\$options type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Psr18HttpClient.php
+
+		-
+			message: "#^Call to an undefined method Psr\\\\Http\\\\Client\\\\ClientInterface\\|Symfony\\\\Contracts\\\\HttpClient\\\\HttpClientInterface\\:\\:request\\(\\)\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/DistantResourceMetadataService.php
+
+		-
+			message: "#^Call to an undefined method Psr\\\\Http\\\\Client\\\\ClientInterface\\|Symfony\\\\Contracts\\\\HttpClient\\\\HttpClientInterface\\:\\:sendRequest\\(\\)\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/DistantResourceMetadataService.php
+
+		-
+			message: """
+				#^Call to deprecated method createFromString\\(\\) of class Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:
+				since 4\\.7\\.0\\. Please use the symfony/serializer for converting the object\\.$#
+			"""
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/DistantResourceMetadataService.php
+
+		-
+			message: "#^Cannot call method createRequest\\(\\) on Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\|null\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/DistantResourceMetadataService.php
+
+		-
+			message: "#^Parameter \\#5 \\$additionalHeaderParameters of class Webauthn\\\\MetadataService\\\\Service\\\\DistantResourceMetadataService constructor expects array\\<string, string\\>, array\\<string, mixed\\> given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/DistantResourceMetadataService.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FidoAllianceCompliantMetadataService.php
+
+		-
+			message: "#^Call to an undefined method Psr\\\\Http\\\\Client\\\\ClientInterface\\|Symfony\\\\Contracts\\\\HttpClient\\\\HttpClientInterface\\:\\:request\\(\\)\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FidoAllianceCompliantMetadataService.php
+
+		-
+			message: "#^Call to an undefined method Psr\\\\Http\\\\Client\\\\ClientInterface\\|Symfony\\\\Contracts\\\\HttpClient\\\\HttpClientInterface\\:\\:sendRequest\\(\\)\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FidoAllianceCompliantMetadataService.php
+
+		-
+			message: """
+				#^Call to deprecated method createFromArray\\(\\) of class Webauthn\\\\MetadataService\\\\Service\\\\MetadataBLOBPayloadEntry\\:
+				since 4\\.7\\.0\\. Please use the symfony/serializer for converting the object\\.$#
+			"""
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FidoAllianceCompliantMetadataService.php
+
+		-
+			message: "#^Cannot access offset 'entries' on mixed\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FidoAllianceCompliantMetadataService.php
+
+		-
+			message: "#^Cannot call method createRequest\\(\\) on Psr\\\\Http\\\\Message\\\\RequestFactoryInterface\\|null\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FidoAllianceCompliantMetadataService.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Service\\\\MetadataBLOBPayloadEntry\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FidoAllianceCompliantMetadataService.php
+
+		-
+			message: "#^Parameter \\#2 \\$headerParameters of method Webauthn\\\\MetadataService\\\\Service\\\\FidoAllianceCompliantMetadataService\\:\\:sendPsrRequest\\(\\) expects array\\<string, string\\>, array\\<string, mixed\\> given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FidoAllianceCompliantMetadataService.php
+
+		-
+			message: "#^Parameter \\#2 \\$headerParameters of method Webauthn\\\\MetadataService\\\\Service\\\\FidoAllianceCompliantMetadataService\\:\\:sendSymfonyRequest\\(\\) expects array\\<string, string\\>, array\\<string, mixed\\> given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FidoAllianceCompliantMetadataService.php
+
+		-
+			message: "#^Parameter &\\$rootCertificates by\\-ref type of method Webauthn\\\\MetadataService\\\\Service\\\\FidoAllianceCompliantMetadataService\\:\\:getJwsPayload\\(\\) expects array\\<string\\>, array given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FidoAllianceCompliantMetadataService.php
+
+		-
+			message: """
+				#^Call to deprecated method createFromString\\(\\) of class Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:
+				since 4\\.7\\.0\\. Please use the symfony/serializer for converting the object\\.$#
+			"""
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FolderResourceMetadataService.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function trim expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/FolderResourceMetadataService.php
+
+		-
+			message: """
+				#^Call to deprecated method createFromString\\(\\) of class Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:
+				since 4\\.7\\.0\\. Please use the symfony/serializer for converting the object\\.$#
+			"""
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/JsonMetadataService.php
+
+		-
+			message: """
+				#^Call to deprecated method createFromString\\(\\) of class Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:
+				since 4\\.7\\.0\\. Please use the symfony/serializer for converting the object\\.$#
+			"""
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/LocalResourceMetadataService.php
+
+		-
+			message: "#^Parameter \\#1 \\$encodedString of static method ParagonIE\\\\ConstantTime\\\\Base64\\:\\:decode\\(\\) expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/LocalResourceMetadataService.php
+
+		-
+			message: "#^Parameter \\#1 \\$statement of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:createFromString\\(\\) expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/LocalResourceMetadataService.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Service\\\\MetadataBLOBPayloadEntry\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/MetadataBLOBPayload.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: Webauthn\\\\MetadataService\\\\Statement\\\\StatusReport given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Service/MetadataBLOBPayloadEntry.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\AuthenticatorGetInfo\\:\\:jsonSerialize\\(\\) should return array\\<string\\> but returns array\\<int\\|string, mixed\\>\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/AuthenticatorGetInfo.php
+
+		-
+			message: "#^Parameter \\#1 \\$selfAttestedFRR of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricAccuracyDescriptor\\:\\:create\\(\\) expects float\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricAccuracyDescriptor.php
+
+		-
+			message: "#^Parameter \\#2 \\$selfAttestedFAR of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricAccuracyDescriptor\\:\\:create\\(\\) expects float\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricAccuracyDescriptor.php
+
+		-
+			message: "#^Parameter \\#3 \\$maxTemplates of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricAccuracyDescriptor\\:\\:create\\(\\) expects float\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricAccuracyDescriptor.php
+
+		-
+			message: "#^Parameter \\#4 \\$maxRetries of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricAccuracyDescriptor\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricAccuracyDescriptor.php
+
+		-
+			message: "#^Parameter \\#5 \\$blockSlowdown of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricAccuracyDescriptor\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricAccuracyDescriptor.php
+
+		-
+			message: "#^Parameter \\#1 \\$certLevel of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricStatusReport.php
+
+		-
+			message: "#^Parameter \\#2 \\$modality of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricStatusReport.php
+
+		-
+			message: "#^Parameter \\#3 \\$effectiveDate of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricStatusReport.php
+
+		-
+			message: "#^Parameter \\#4 \\$certificationDescriptor of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricStatusReport.php
+
+		-
+			message: "#^Parameter \\#5 \\$certificateNumber of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricStatusReport.php
+
+		-
+			message: "#^Parameter \\#6 \\$certificationPolicyVersion of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricStatusReport.php
+
+		-
+			message: "#^Parameter \\#7 \\$certificationRequirementsVersion of static method Webauthn\\\\MetadataService\\\\Statement\\\\BiometricStatusReport\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/BiometricStatusReport.php
+
+		-
+			message: "#^Parameter \\#1 \\$base of static method Webauthn\\\\MetadataService\\\\Statement\\\\CodeAccuracyDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/CodeAccuracyDescriptor.php
+
+		-
+			message: "#^Parameter \\#2 \\$minLength of static method Webauthn\\\\MetadataService\\\\Statement\\\\CodeAccuracyDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/CodeAccuracyDescriptor.php
+
+		-
+			message: "#^Parameter \\#3 \\$maxRetries of static method Webauthn\\\\MetadataService\\\\Statement\\\\CodeAccuracyDescriptor\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/CodeAccuracyDescriptor.php
+
+		-
+			message: "#^Parameter \\#4 \\$blockSlowdown of static method Webauthn\\\\MetadataService\\\\Statement\\\\CodeAccuracyDescriptor\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/CodeAccuracyDescriptor.php
+
+		-
+			message: "#^@readonly property Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:\\$plte is assigned outside of the constructor\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/DisplayPNGCharacteristicsDescriptor.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: Webauthn\\\\MetadataService\\\\Statement\\\\RgbPaletteEntry given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/DisplayPNGCharacteristicsDescriptor.php
+
+		-
+			message: "#^Parameter \\#1 \\$width of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/DisplayPNGCharacteristicsDescriptor.php
+
+		-
+			message: "#^Parameter \\#2 \\$array of function array_map expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/DisplayPNGCharacteristicsDescriptor.php
+
+		-
+			message: "#^Parameter \\#2 \\$height of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/DisplayPNGCharacteristicsDescriptor.php
+
+		-
+			message: "#^Parameter \\#3 \\$bitDepth of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/DisplayPNGCharacteristicsDescriptor.php
+
+		-
+			message: "#^Parameter \\#4 \\$colorType of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/DisplayPNGCharacteristicsDescriptor.php
+
+		-
+			message: "#^Parameter \\#5 \\$compression of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/DisplayPNGCharacteristicsDescriptor.php
+
+		-
+			message: "#^Parameter \\#6 \\$filter of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/DisplayPNGCharacteristicsDescriptor.php
+
+		-
+			message: "#^Parameter \\#7 \\$interlace of static method Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/DisplayPNGCharacteristicsDescriptor.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\EcdaaTrustAnchor\\:\\:jsonSerialize\\(\\) should return array\\<string, string\\> but returns array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/EcdaaTrustAnchor.php
+
+		-
+			message: "#^Parameter \\#1 \\$encodedString of static method ParagonIE\\\\ConstantTime\\\\Base64\\:\\:decode\\(\\) expects string, mixed given\\.$#"
+			count: 5
+			path: src/webauthn/src/MetadataService/Statement/EcdaaTrustAnchor.php
+
+		-
+			message: "#^Parameter \\#6 \\$G1Curve of class Webauthn\\\\MetadataService\\\\Statement\\\\EcdaaTrustAnchor constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/EcdaaTrustAnchor.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:__construct\\(\\) has parameter \\$tcDisplayPNGCharacteristics with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$alternativeDescriptions with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$attachmentHint with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$attestationCertificateKeyIdentifiers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$attestationRootCertificates with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$attestationTypes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$authenticationAlgorithms with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$ecdaaTrustAnchors with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$keyProtection with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$matcherProtection with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$publicKeyAlgAndEncodings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$supportedExtensions with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$tcDisplay with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$tcDisplayPNGCharacteristics with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$upv with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) has parameter \\$userVerificationDetails with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: Webauthn\\\\MetadataService\\\\Statement\\\\DisplayPNGCharacteristicsDescriptor given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\CertificateChain\\\\CertificateToolbox\\:\\:fixPEMStructures\\(\\) expects array\\<string\\>, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Statement\\\\ExtensionDescriptor\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Statement\\\\VerificationMethodANDCombinations\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, array given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\MetadataService\\\\Statement\\\\Version\\:\\:createFromArray\\(\\) expects array\\<string, mixed\\>, array given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#1 \\$description of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#1 \\$info of static method Webauthn\\\\MetadataService\\\\Statement\\\\AuthenticatorGetInfo\\:\\:create\\(\\) expects array\\<int\\|string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#10 \\$matcherProtection of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#11 \\$tcDisplay of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#13 \\$alternativeDescriptions of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#14 \\$legalHeader of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#15 \\$aaid of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#16 \\$aaguid of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#17 \\$attestationCertificateKeyIdentifiers of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#18 \\$keyProtection of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#19 \\$isKeyRestricted of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects bool\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#2 \\$array of function array_map expects array, mixed given\\.$#"
+			count: 4
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#2 \\$authenticatorVersion of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#20 \\$isFreshUserVerificationRequired of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects bool\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#21 \\$cryptoStrength of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#22 \\$attachmentHint of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#23 \\$tcDisplayContentType of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#25 \\$ecdaaTrustAnchors of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#26 \\$icon of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#3 \\$protocolFamily of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#4 \\$schema of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#6 \\$authenticationAlgorithms of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#7 \\$publicKeyAlgAndEncodings of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Parameter \\#8 \\$attestationTypes of static method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:create\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: """
+				#^Parameter \\$ecdaaTrustAnchors of method Webauthn\\\\MetadataService\\\\Statement\\\\MetadataStatement\\:\\:__construct\\(\\) has typehint with deprecated class Webauthn\\\\MetadataService\\\\Statement\\\\EcdaaTrustAnchor\\:
+				since 4\\.2\\.0 and will be removed in 5\\.0\\.0\\. The ECDAA Trust Anchor does no longer exist in Webauthn specification\\.$#
+			"""
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/MetadataStatement.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\PatternAccuracyDescriptor\\:\\:jsonSerialize\\(\\) should return array\\<string, int\\|null\\> but returns array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/PatternAccuracyDescriptor.php
+
+		-
+			message: "#^Parameter \\#1 \\$r of static method Webauthn\\\\MetadataService\\\\Statement\\\\RgbPaletteEntry\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/RgbPaletteEntry.php
+
+		-
+			message: "#^Parameter \\#2 \\$g of static method Webauthn\\\\MetadataService\\\\Statement\\\\RgbPaletteEntry\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/RgbPaletteEntry.php
+
+		-
+			message: "#^Parameter \\#3 \\$b of static method Webauthn\\\\MetadataService\\\\Statement\\\\RgbPaletteEntry\\:\\:create\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/RgbPaletteEntry.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between mixed and null will always evaluate to false\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/StatusReport.php
+
+		-
+			message: "#^@readonly property Webauthn\\\\MetadataService\\\\Statement\\\\VerificationMethodANDCombinations\\:\\:\\$verificationMethods is assigned outside of the constructor\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/VerificationMethodANDCombinations.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: Webauthn\\\\MetadataService\\\\Statement\\\\VerificationMethodDescriptor given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/VerificationMethodANDCombinations.php
+
+		-
+			message: "#^Method Webauthn\\\\MetadataService\\\\Statement\\\\Version\\:\\:jsonSerialize\\(\\) should return array\\<string, int\\|null\\> but returns array\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/Version.php
+
+		-
+			message: "#^Parameter \\#1 \\$major of static method Webauthn\\\\MetadataService\\\\Statement\\\\Version\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/Version.php
+
+		-
+			message: "#^Parameter \\#2 \\$minor of static method Webauthn\\\\MetadataService\\\\Statement\\\\Version\\:\\:create\\(\\) expects int\\|null, mixed given\\.$#"
+			count: 1
+			path: src/webauthn/src/MetadataService/Statement/Version.php
 
 		-
 			message: "#^Parameter \\#1 \\$json of static method Webauthn\\\\PublicKeyCredentialCreationOptions\\:\\:createFromArray\\(\\) expects array, mixed given\\.$#"
