@@ -17,7 +17,7 @@ use Rector\ValueObject\PhpVersion;
 
 return static function (RectorConfig $config): void {
     $config->import(SetList::DEAD_CODE);
-    $config->import(LevelSetList::UP_TO_PHP_81);
+    $config->import(LevelSetList::UP_TO_PHP_82);
     $config->import(SymfonySetList::SYMFONY_60);
     $config->import(SymfonySetList::SYMFONY_50_TYPES);
     $config->import(SymfonySetList::SYMFONY_52_VALIDATOR_ATTRIBUTES);
@@ -40,7 +40,7 @@ return static function (RectorConfig $config): void {
         ReadOnlyPropertyRector::class => [__DIR__ . '/src/metadata-service/src/Statement/MetadataStatement.php'],
         PreferPHPUnitThisCallRector::class,
     ]);
-    $config->phpVersion(PhpVersion::PHP_81);
+    $config->phpVersion(PhpVersion::PHP_82);
     $config->parallel();
     $config->importNames();
     $config->importShortClasses();

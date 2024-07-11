@@ -6,7 +6,8 @@ namespace Webauthn\Tests\MetadataService\Unit;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Serializer\SerializerInterface;
-use Webauthn\MetadataService\Denormalizer\MetadataStatementSerializerFactory;
+use Webauthn\AttestationStatement\AttestationStatementSupportManager;
+use Webauthn\Denormalizer\WebauthnSerializerFactory;
 
 /**
  * @internal
@@ -15,6 +16,6 @@ abstract class MdsTestCase extends TestCase
 {
     protected function getSerializer(): SerializerInterface
     {
-        return MetadataStatementSerializerFactory::create();
+        return (new WebauthnSerializerFactory(AttestationStatementSupportManager::create()))->create();
     }
 }

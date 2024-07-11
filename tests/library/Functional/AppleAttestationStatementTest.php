@@ -82,6 +82,6 @@ final class AppleAttestationStatementTest extends AbstractTestCase
         static::assertSame(0, $authenticatorData->signCount);
         static::assertInstanceOf(AttestedCredentialData::class, $authenticatorData->attestedCredentialData);
         static::assertFalse($authenticatorData->hasExtensions());
-        $this->clock->set(new DateTimeImmutable());
+        $this->clock->set(new DateTimeImmutable('now'));
     }
 }

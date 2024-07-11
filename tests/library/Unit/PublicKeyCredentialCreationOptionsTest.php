@@ -52,7 +52,7 @@ final class PublicKeyCredentialCreationOptionsTest extends AbstractTestCase
 
         $data = $this->getSerializer()
             ->deserialize(
-                '{"rp":{"name":"RP"},"user":{"name":"USER","id":"aWQ","displayName":"FOO BAR"},"challenge":"Y2hhbGxlbmdl","pubKeyCredParams":[{"type":"type","alg":-100}],"timeout":1000,"excludeCredentials":[{"type":"type","id":"aWQ","transports":["transport"]}],"authenticatorSelection":{"requireResidentKey":false,"userVerification":"preferred","residentKey":"preferred"},"attestation":"direct"}',
+                '{"rp":{"name":"RP"},"user":{"name":"USER","id":"aWQ","displayName":"FOO BAR"},"challenge":"Y2hhbGxlbmdl","pubKeyCredParams":[{"type":"type","alg":-100}],"timeout":1000,"excludeCredentials":[{"type":"type","id":"aWQ","transports":["transport"]}],"authenticatorSelection":{"userVerification":"preferred","residentKey":"preferred"},"attestation":"direct"}',
                 PublicKeyCredentialCreationOptions::class,
                 'json'
             );
@@ -60,7 +60,7 @@ final class PublicKeyCredentialCreationOptionsTest extends AbstractTestCase
         static::assertSame('direct', $data->attestation);
         static::assertSame(1000, $data->timeout);
         static::assertJsonStringEqualsJsonString(
-            '{"rp":{"name":"RP"},"user":{"name":"USER","id":"aWQ","displayName":"FOO BAR"},"challenge":"Y2hhbGxlbmdl","pubKeyCredParams":[{"type":"type","alg":-100}],"timeout":1000,"excludeCredentials":[{"type":"type","id":"aWQ","transports":["transport"]}],"authenticatorSelection":{"requireResidentKey":false,"userVerification":"preferred","residentKey":"preferred"},"attestation":"direct"}',
+            '{"rp":{"name":"RP"},"user":{"name":"USER","id":"aWQ","displayName":"FOO BAR"},"challenge":"Y2hhbGxlbmdl","pubKeyCredParams":[{"type":"type","alg":-100}],"timeout":1000,"excludeCredentials":[{"type":"type","id":"aWQ","transports":["transport"]}],"authenticatorSelection":{"userVerification":"preferred","residentKey":"preferred"},"attestation":"direct"}',
             $this->getSerializer()
                 ->serialize($data, 'json', [
                     AbstractObjectNormalizer::SKIP_NULL_VALUES => true,

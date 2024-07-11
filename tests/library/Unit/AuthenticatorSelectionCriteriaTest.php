@@ -40,7 +40,6 @@ final class AuthenticatorSelectionCriteriaTest extends AbstractTestCase
             AuthenticatorSelectionCriteria::AUTHENTICATOR_ATTACHMENT_PLATFORM,
             $data->authenticatorAttachment
         );
-        static::assertNull($data->requireResidentKey);
         static::assertSame(AuthenticatorSelectionCriteria::RESIDENT_KEY_REQUIREMENT_NO_PREFERENCE, $data->residentKey);
         static::assertJsonStringEqualsJsonString($expectedJson, $this->getSerializer()->serialize($data, 'json', [
             AbstractObjectNormalizer::SKIP_NULL_VALUES => true,
@@ -58,12 +57,11 @@ final class AuthenticatorSelectionCriteriaTest extends AbstractTestCase
     public function anAuthenticatorSelectionCriteriaWithResidentKeyCanBeCreatedAndValueAccessed(): void
     {
         // Given
-        $expectedJson = '{"authenticatorAttachment":"platform","requireResidentKey":true,"userVerification":"required","residentKey":"required"}';
+        $expectedJson = '{"userVerification":"required","residentKey":"required","authenticatorAttachment":"platform"}';
         $authenticatorSelectionCriteria = AuthenticatorSelectionCriteria::create(
             AuthenticatorSelectionCriteria::AUTHENTICATOR_ATTACHMENT_PLATFORM,
             AuthenticatorSelectionCriteria::USER_VERIFICATION_REQUIREMENT_REQUIRED,
-            AuthenticatorSelectionCriteria::RESIDENT_KEY_REQUIREMENT_REQUIRED,
-            true
+            AuthenticatorSelectionCriteria::RESIDENT_KEY_REQUIREMENT_REQUIRED
         );
 
         //When
@@ -81,13 +79,16 @@ final class AuthenticatorSelectionCriteriaTest extends AbstractTestCase
             AuthenticatorSelectionCriteria::AUTHENTICATOR_ATTACHMENT_PLATFORM,
             $data->authenticatorAttachment
         );
-        static::assertTrue($data->requireResidentKey);
         static::assertSame(AuthenticatorSelectionCriteria::RESIDENT_KEY_REQUIREMENT_REQUIRED, $data->residentKey);
-        static::assertSame($expectedJson, $this->getSerializer()->serialize($data, 'json', [
+        static::assertJsonStringEqualsJsonString($expectedJson, $this->getSerializer()->serialize($data, 'json', [
             AbstractObjectNormalizer::SKIP_NULL_VALUES => true,
         ]));
-        static::assertSame($expectedJson, $this->getSerializer()->serialize($authenticatorSelectionCriteria, 'json', [
-            AbstractObjectNormalizer::SKIP_NULL_VALUES => true,
-        ]));
+        static::assertJsonStringEqualsJsonString(
+            $expectedJson,
+            $this->getSerializer()
+                ->serialize($authenticatorSelectionCriteria, 'json', [
+                    AbstractObjectNormalizer::SKIP_NULL_VALUES => true,
+                ])
+        );
     }
 }

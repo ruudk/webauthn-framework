@@ -15,10 +15,10 @@ use Webauthn\PublicKeyCredentialSource;
 use Webauthn\PublicKeyCredentialUserEntity;
 use Webauthn\TrustPath\EmptyTrustPath;
 
-final class PublicKeyCredentialSourceRepository implements PublicKeyCredentialSourceRepositoryInterface, CanSaveCredentialSource
+final readonly class PublicKeyCredentialSourceRepository implements PublicKeyCredentialSourceRepositoryInterface, CanSaveCredentialSource
 {
     public function __construct(
-        private readonly CacheItemPoolInterface $cacheItemPool
+        private CacheItemPoolInterface $cacheItemPool
     ) {
         $publicKeyCredentialSource1 = PublicKeyCredentialSource::create(
             base64_decode(

@@ -7,8 +7,7 @@ namespace Webauthn\Tests\Unit\AuthenticationExtensions;
 use PHPUnit\Framework\Attributes\Test;
 use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 use Webauthn\AuthenticationExtensions\AuthenticationExtension;
-use Webauthn\AuthenticationExtensions\AuthenticationExtensionsClientInputs;
-use Webauthn\AuthenticationExtensions\AuthenticationExtensionsClientOutputs;
+use Webauthn\AuthenticationExtensions\AuthenticationExtensions;
 use Webauthn\Tests\AbstractTestCase;
 
 /**
@@ -29,25 +28,9 @@ final class AuthenticationExtensionsClientTest extends AbstractTestCase
     }
 
     #[Test]
-    public function theAuthenticationExtensionsClientInputsCanManageExtensions(): void
+    public function theAuthenticationExtensionsCanManageExtensions(): void
     {
-        $inputs = AuthenticationExtensionsClientInputs::create([
-            AuthenticationExtension::create('name', ['value']),
-        ]);
-
-        static::assertSame(1, $inputs->count());
-        static::assertSame('{"name":["value"]}', $this->getSerializer()->serialize($inputs, 'json', [
-            AbstractObjectNormalizer::SKIP_NULL_VALUES => true,
-        ]));
-        static::assertContainsOnlyInstancesOf(AuthenticationExtension::class, $inputs);
-    }
-
-    #[Test]
-    public function theAuthenticationExtensionsClientOutputsCanManageExtensions(): void
-    {
-        $inputs = AuthenticationExtensionsClientOutputs::create([
-            AuthenticationExtension::create('name', ['value']),
-        ]);
+        $inputs = AuthenticationExtensions::create([AuthenticationExtension::create('name', ['value'])]);
 
         static::assertSame(1, $inputs->count());
         static::assertSame('{"name":["value"]}', $this->getSerializer()->serialize($inputs, 'json', [

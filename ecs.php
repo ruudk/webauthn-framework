@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use PhpCsFixer\Fixer\Alias\MbStrFunctionsFixer;
 use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
 use PhpCsFixer\Fixer\ClassNotation\ProtectedToPrivateFixer;
 use PhpCsFixer\Fixer\Comment\HeaderCommentFixer;
@@ -53,7 +52,6 @@ return static function (ECSConfig $config): void {
     $config->rule(ProtectedToPrivateFixer::class);
     $config->rule(DeclareStrictTypesFixer::class);
     $config->rule(NativeConstantInvocationFixer::class);
-    $config->rule(MbStrFunctionsFixer::class);
     $config->rule(LinebreakAfterOpeningTagFixer::class);
     $config->rule(CombineConsecutiveIssetsFixer::class);
     $config->rule(CombineConsecutiveUnsetsFixer::class);

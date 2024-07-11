@@ -8,7 +8,6 @@ use PHPUnit\Framework\Attributes\Test;
 use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 use Webauthn\AuthenticationExtensions\AuthenticationExtension;
 use Webauthn\AuthenticationExtensions\AuthenticationExtensions;
-use Webauthn\AuthenticationExtensions\AuthenticationExtensionsClientInputs;
 use Webauthn\PublicKeyCredentialDescriptor;
 use Webauthn\PublicKeyCredentialRequestOptions;
 use Webauthn\Tests\AbstractTestCase;
@@ -46,7 +45,7 @@ final class PublicKeyCredentialRequestOptionsTest extends AbstractTestCase
     #[Test]
     public function aPublicKeyCredentialRequestOptionsCanBeCreatedAndValueAccessed(): void
     {
-        $extensions = AuthenticationExtensionsClientInputs::create([AuthenticationExtension::create('foo', 'bar')]);
+        $extensions = AuthenticationExtensions::create([AuthenticationExtension::create('foo', 'bar')]);
         $credential = PublicKeyCredentialDescriptor::create('type', 'id', ['transport']);
 
         $publicKeyCredentialRequestOptions = PublicKeyCredentialRequestOptions::create(

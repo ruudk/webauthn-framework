@@ -1,35 +1,35 @@
-parameters:
+deptrac:
   paths:
     - './src'
   layers:
     - name: 'Webauthn'
       collectors:
         - type: 'directory'
-          regex: 'src/webauthn/.*'
+          value: 'src/webauthn/.*'
     - name: 'UX'
       collectors:
         - type: 'directory'
-          regex: 'src/stimulus/.*'
+          value: 'src/stimulus/.*'
     - name: 'SymfonyBundle'
       collectors:
         - type: 'directory'
-          regex: 'src/symfony/.*'
+          value: 'src/symfony/.*'
     - name: 'MetadataService'
       collectors:
         - type: 'directory'
-          regex: 'src/metadata-service/.*'
+          value: 'src/metadata-service/.*'
     - name: 'Vendors'
       collectors:
-        - { type: className, regex: '^Cose\\' }
-        - { type: className, regex: '^Symfony\\' }
-        - { type: className, regex: '^Jose\\' }
-        - { type: className, regex: '^Psr\\' }
-        - { type: className, regex: '^SpomkyLabs\\Pki\\' }
-        - { type: className, regex: '^CBOR\\' }
-        - { type: className, regex: '^Lcobucci\\' }
-        - { type: className, regex: '^ParagonIE\\' }
-        - { type: className, regex: '^Safe\\' }
-        - { type: className, regex: '^Doctrine\\' }
+        - { type: classLike, value: '^Cose\\' }
+        - { type: classLike, value: '^Symfony\\' }
+        - { type: classLike, value: '^Jose\\' }
+        - { type: classLike, value: '^Psr\\' }
+        - { type: classLike, value: '^SpomkyLabs\\Pki\\' }
+        - { type: classLike, value: '^CBOR\\' }
+        - { type: classLike, value: '^Lcobucci\\' }
+        - { type: classLike, value: '^ParagonIE\\' }
+        - { type: classLike, value: '^Safe\\' }
+        - { type: classLike, value: '^Doctrine\\' }
   ruleset:
     MetadataService:
       - 'Vendors'

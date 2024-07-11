@@ -13,7 +13,7 @@ final class MockClock implements ClockInterface
 
     public function now(): DateTimeImmutable
     {
-        return $this->now ?? new DateTimeImmutable();
+        return $this->now ?? new DateTimeImmutable('now');
     }
 
     public function set(DateTimeImmutable $date): void

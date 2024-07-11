@@ -18,9 +18,7 @@ use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\Serializer\SerializerInterface;
 use Webauthn\AttestationStatement\AndroidKeyAttestationStatementSupport;
-use Webauthn\AttestationStatement\AndroidSafetyNetAttestationStatementSupport;
 use Webauthn\AttestationStatement\AppleAttestationStatementSupport;
-use Webauthn\AttestationStatement\AttestationObjectLoader;
 use Webauthn\AttestationStatement\AttestationStatementSupportManager;
 use Webauthn\AttestationStatement\FidoU2FAttestationStatementSupport;
 use Webauthn\AttestationStatement\NoneAttestationStatementSupport;
@@ -37,7 +35,6 @@ use Webauthn\MetadataService\MetadataStatementRepository as MetadataStatementRep
 use Webauthn\MetadataService\Service\ChainedMetadataServices;
 use Webauthn\MetadataService\Service\JsonMetadataService;
 use Webauthn\MetadataService\Service\LocalResourceMetadataService;
-use Webauthn\PublicKeyCredentialLoader;
 use Webauthn\Tests\Bundle\Functional\MockClock;
 use Webauthn\Tests\Functional\MetadataStatementRepository;
 use Webauthn\Tests\Functional\StatusReportRepository;
@@ -154,27 +151,12 @@ abstract class AbstractTestCase extends TestCase
         return $this->webauthnSerializer;
     }
 
-    protected function getLegacyLoader(): PublicKeyCredentialLoader
-    {
-        return new PublicKeyCredentialLoader(new AttestationObjectLoader(
-            $this->getAttestationStatementSupportManager()
-        ));
-    }
-
     private function getAttestationStatementSupportManager(): AttestationStatementSupportManager
     {
         $attestationStatementSupportManager = new AttestationStatementSupportManager();
         $attestationStatementSupportManager->add(new NoneAttestationStatementSupport());
         $attestationStatementSupportManager->add(new AppleAttestationStatementSupport());
         $attestationStatementSupportManager->add(AndroidKeyAttestationStatementSupport::create());
-        $androidSafetyNetAttestationStatementSupport = new AndroidSafetyNetAttestationStatementSupport(
-            $this->clock
-        );
-        $androidSafetyNetAttestationStatementSupport
-            ->enableApiVerification($this->client, 'api_key')
-            ->setLeeway(0)
-            ->setMaxAge(99_999_999_999);
-        $attestationStatementSupportManager->add($androidSafetyNetAttestationStatementSupport);
         $attestationStatementSupportManager->add(new FidoU2FAttestationStatementSupport());
         $attestationStatementSupportManager->add(new PackedAttestationStatementSupport(
             $this->getAlgorithmManager()

@@ -5,7 +5,8 @@ declare(strict_types=1);
 namespace Webauthn\Tests\Unit;
 
 use Symfony\Component\Serializer\SerializerInterface;
-use Webauthn\MetadataService\Denormalizer\MetadataStatementSerializerFactory;
+use Webauthn\AttestationStatement\AttestationStatementSupportManager;
+use Webauthn\Denormalizer\WebauthnSerializerFactory;
 use Webauthn\MetadataService\MetadataStatementRepository;
 use Webauthn\MetadataService\Service\MetadataBLOBPayloadEntry;
 use Webauthn\MetadataService\Statement\MetadataStatement;
@@ -14,13 +15,13 @@ use Webauthn\MetadataService\StatusReportRepository;
 /**
  * @internal
  */
-final class DummyMetadataStatementRepository implements MetadataStatementRepository, StatusReportRepository
+final readonly class DummyMetadataStatementRepository implements MetadataStatementRepository, StatusReportRepository
 {
-    private readonly SerializerInterface $serializer;
+    private SerializerInterface $serializer;
 
     public function __construct()
     {
-        $this->serializer = MetadataStatementSerializerFactory::create();
+        $this->serializer = (new WebauthnSerializerFactory(AttestationStatementSupportManager::create()))->create();
     }
 
     public function findOneByAAGUID(string $aaguid): ?MetadataStatement

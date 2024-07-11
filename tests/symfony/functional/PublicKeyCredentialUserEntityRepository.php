@@ -12,10 +12,10 @@ use Webauthn\Bundle\Repository\CanRegisterUserEntity;
 use Webauthn\Bundle\Repository\PublicKeyCredentialUserEntityRepositoryInterface;
 use Webauthn\PublicKeyCredentialUserEntity;
 
-final class PublicKeyCredentialUserEntityRepository implements PublicKeyCredentialUserEntityRepositoryInterface, CanRegisterUserEntity, CanGenerateUserEntity
+final readonly class PublicKeyCredentialUserEntityRepository implements PublicKeyCredentialUserEntityRepositoryInterface, CanRegisterUserEntity, CanGenerateUserEntity
 {
     public function __construct(
-        private readonly CacheItemPoolInterface $cacheItemPool
+        private CacheItemPoolInterface $cacheItemPool
     ) {
         $this->saveUserEntity(User::create('admin', 'foo', 'Foo BAR (-_-)', null, ['ROLE_ADMIN', 'ROLE_USER']));
         $this->saveUserEntity(User::create(
