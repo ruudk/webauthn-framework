@@ -27,6 +27,9 @@ framework:
   uid:
     default_uuid_version: 7
     time_based_uuid_version: 7
+  assets:
+    base_urls:
+      - '%kernel.project_dir%/tests/symfony/public'
 
 services:
   _defaults:
@@ -72,7 +75,6 @@ services:
     #    tags:
     #      - 'webauthn.mds_service'
     #    arguments:
-    #      - '@Psr\Http\Message\RequestFactoryInterface'
     #      - '@Psr\Http\Client\ClientInterface'
     #      - 'https://fidoalliance.co.nz/blob.jwt'
     #      - [ ]
@@ -124,9 +126,6 @@ doctrine:
 webauthn:
   credential_repository: 'Webauthn\Tests\Bundle\Functional\PublicKeyCredentialSourceRepository'
   user_repository: 'Webauthn\Tests\Bundle\Functional\PublicKeyCredentialUserEntityRepository'
-  android_safetynet:
-    max_age: 99999999999
-    api_key: 'test'
   controllers:
     enabled: true
     creation:

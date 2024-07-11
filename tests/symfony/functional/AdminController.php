@@ -8,10 +8,10 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
-final class AdminController
+final readonly class AdminController
 {
     public function __construct(
-        private readonly TokenStorageInterface $tokenStorage
+        private TokenStorageInterface $tokenStorage
     ) {
     }
 

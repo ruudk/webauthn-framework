@@ -9,10 +9,10 @@ use Webauthn\MetadataService\Service\MetadataService;
 use Webauthn\MetadataService\Statement\MetadataStatement;
 use Webauthn\MetadataService\StatusReportRepository as StatusReportRepositoryInterface;
 
-final class MetadataStatementRepository implements MetadataStatementRepositoryInterface, StatusReportRepositoryInterface
+final readonly class MetadataStatementRepository implements MetadataStatementRepositoryInterface, StatusReportRepositoryInterface
 {
     public function __construct(
-        private readonly MetadataService $service
+        private MetadataService $service
     ) {
     }
 

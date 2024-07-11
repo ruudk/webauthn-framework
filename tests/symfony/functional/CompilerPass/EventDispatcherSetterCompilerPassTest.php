@@ -12,7 +12,6 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
 use Webauthn\AttestationStatement\AndroidKeyAttestationStatementSupport;
-use Webauthn\AttestationStatement\AndroidSafetyNetAttestationStatementSupport;
 use Webauthn\AttestationStatement\AppleAttestationStatementSupport;
 use Webauthn\AttestationStatement\AttestationObjectLoader;
 use Webauthn\AttestationStatement\FidoU2FAttestationStatementSupport;
@@ -26,7 +25,6 @@ use Webauthn\MetadataService\Service\DistantResourceMetadataService;
 use Webauthn\MetadataService\Service\FidoAllianceCompliantMetadataService;
 use Webauthn\MetadataService\Service\InMemoryMetadataService;
 use Webauthn\MetadataService\Service\LocalResourceMetadataService;
-use Webauthn\MetadataService\Service\StringMetadataService;
 
 /**
  * @internal
@@ -63,10 +61,8 @@ final class EventDispatcherSetterCompilerPassTest extends AbstractCompilerPassTe
         yield [FidoAllianceCompliantMetadataService::class];
         yield [InMemoryMetadataService::class];
         yield [LocalResourceMetadataService::class];
-        yield [StringMetadataService::class];
         yield [WebauthnExtension::class];
         yield [AndroidKeyAttestationStatementSupport::class];
-        yield [AndroidSafetyNetAttestationStatementSupport::class];
         yield [AppleAttestationStatementSupport::class];
         yield [AttestationObjectLoader::class];
         yield [FidoU2FAttestationStatementSupport::class];

@@ -8,10 +8,10 @@ use Webauthn\MetadataService\MetadataStatementRepository as MetadataStatementRep
 use Webauthn\MetadataService\Service\MetadataService;
 use Webauthn\MetadataService\Statement\MetadataStatement;
 
-final class MetadataStatementRepository implements MetadataStatementRepositoryInterface
+final readonly class MetadataStatementRepository implements MetadataStatementRepositoryInterface
 {
     public function __construct(
-        private readonly MetadataService $service
+        private MetadataService $service
     ) {
     }
 
