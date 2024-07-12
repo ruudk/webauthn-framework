@@ -90,7 +90,7 @@ final class PublicKeyCredentialCreationOptionsTest extends AbstractTestCase
                 AbstractObjectNormalizer::SKIP_NULL_VALUES => true,
             ]);
         static::assertJsonStringEqualsJsonString(
-            '{"rp":{"name":"RP"},"user":{"name":"USER","id":"aWQ","displayName":"FOO BAR"},"challenge":"Y2hhbGxlbmdl","pubKeyCredParams":[{"type":"type","alg":-100}],"timeout":1000,"attestation":"indirect"}',
+            '{"rp":{"name":"RP"},"user":{"name":"USER","id":"aWQ","displayName":"FOO BAR"},"excludeCredentials": [],"challenge":"Y2hhbGxlbmdl","pubKeyCredParams":[{"type":"type","alg":-100}],"timeout":1000,"attestation":"indirect"}',
             $json
         );
 

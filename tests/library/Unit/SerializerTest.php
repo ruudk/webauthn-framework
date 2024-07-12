@@ -75,6 +75,7 @@ final class SerializerTest extends AbstractTestCase
                     "authenticatorAttachment": "cross-platform",
                     "userVerification": "required"
                 },
+                "excludeCredentials": [],
                 "attestation": "none"
             }',
             $json,

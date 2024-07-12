@@ -58,12 +58,13 @@ final class AdditionalAuthenticatorTest extends WebTestCase
             'attestation',
             'user',
             'authenticatorSelection',
+            'excludeCredentials',
         ];
         foreach ($expectedKeys as $expectedKey) {
             static::assertArrayHasKey($expectedKey, $data);
         }
         static::assertSame('ok', $data['status']);
-        static::assertArrayNotHasKey('excludeCredentials', $data); // username enumeration prevention is enabled
+        static::assertSame($data['excludeCredentials'], []); // username enumeration prevention is enabled
     }
 
     #[Test]
