@@ -296,6 +296,16 @@ parameters:
 			path: src/symfony/src/Doctrine/Type/TrustPathDataType.php
 
 		-
+			message: "#^Method Webauthn\\\\Bundle\\\\Repository\\\\DoctrineCredentialSourceRepository\\:\\:findAllForUserEntity\\(\\) should return array\\<Webauthn\\\\PublicKeyCredentialSource\\> but returns mixed\\.$#"
+			count: 1
+			path: src/symfony/src/Repository/DoctrineCredentialSourceRepository.php
+
+		-
+			message: "#^Method Webauthn\\\\Bundle\\\\Repository\\\\DoctrineCredentialSourceRepository\\:\\:findOneByCredentialId\\(\\) should return Webauthn\\\\PublicKeyCredentialSource\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/symfony/src/Repository/DoctrineCredentialSourceRepository.php
+
+		-
 			message: "#^Property Webauthn\\\\Bundle\\\\Security\\\\Authentication\\\\Token\\\\WebauthnToken\\:\\:\\$extensions \\(Webauthn\\\\AuthenticationExtensions\\\\AuthenticationExtensions\\|null\\) does not accept mixed\\.$#"
 			count: 1
 			path: src/symfony/src/Security/Authentication/Token/WebauthnToken.php
