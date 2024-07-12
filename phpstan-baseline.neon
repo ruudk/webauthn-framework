@@ -1,11 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Cannot access offset 'FrameworkBundle' on array\\|bool\\|float\\|int\\|string\\|UnitEnum\\.$#"
-			count: 1
-			path: src/stimulus/src/DependencyInjection/WebauthnStimulusExtension.php
-
-		-
 			message: "#^Method Webauthn\\\\Bundle\\\\CredentialOptionsBuilder\\\\PublicKeyCredentialCreationOptionsBuilder\\:\\:getFromRequest\\(\\) invoked with 3 parameters, 2 required\\.$#"
 			count: 1
 			path: src/symfony/src/Controller/AttestationRequestController.php
@@ -14,21 +9,6 @@ parameters:
 			message: "#^Parameter \\#1 \\$userEntity of method Webauthn\\\\Bundle\\\\CredentialOptionsBuilder\\\\ProfileBasedRequestOptionsBuilder\\:\\:getCredentials\\(\\) expects Webauthn\\\\PublicKeyCredentialUserEntity, Webauthn\\\\PublicKeyCredentialUserEntity\\|null given\\.$#"
 			count: 1
 			path: src/symfony/src/CredentialOptionsBuilder/ProfileBasedRequestOptionsBuilder.php
-
-		-
-			message: "#^Call to an undefined method Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\NodeParentInterface\\:\\:integerNode\\(\\)\\.$#"
-			count: 1
-			path: src/symfony/src/DependencyInjection/Configuration.php
-
-		-
-			message: "#^Call to an undefined method Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\NodeParentInterface\\:\\:scalarNode\\(\\)\\.$#"
-			count: 4
-			path: src/symfony/src/DependencyInjection/Configuration.php
-
-		-
-			message: "#^Call to an undefined method Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\NodeParentInterface\\:\\:scalarNode\\(\\)\\.$#"
-			count: 1
-			path: src/symfony/src/DependencyInjection/Factory/Security/WebauthnFactory.php
 
 		-
 			message: "#^Cannot access offset 'enabled' on mixed\\.$#"
@@ -374,16 +354,6 @@ parameters:
 			message: "#^Property Webauthn\\\\Bundle\\\\Security\\\\Authentication\\\\Token\\\\WebauthnToken\\:\\:\\$signCount \\(int\\) does not accept mixed\\.$#"
 			count: 1
 			path: src/symfony/src/Security/Authentication/Token/WebauthnToken.php
-
-		-
-			message: "#^Method Webauthn\\\\Bundle\\\\Security\\\\Authorization\\\\Voter\\\\IsUserPresentVoter\\:\\:vote\\(\\) has parameter \\$attributes with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/symfony/src/Security/Authorization/Voter/IsUserPresentVoter.php
-
-		-
-			message: "#^Method Webauthn\\\\Bundle\\\\Security\\\\Authorization\\\\Voter\\\\IsUserVerifiedVoter\\:\\:vote\\(\\) has parameter \\$attributes with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/symfony/src/Security/Authorization/Voter/IsUserVerifiedVoter.php
 
 		-
 			message: "#^Call to an undefined method Symfony\\\\Component\\\\HttpFoundation\\\\Request\\:\\:getContentType\\(\\)\\.$#"
@@ -1041,16 +1011,6 @@ parameters:
 			path: src/webauthn/src/Denormalizer/AttestationObjectDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AttestationObjectDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AttestationObjectDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AttestationObjectDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AttestationObjectDenormalizer.php
-
-		-
 			message: "#^Parameter \\#1 \\$data of class Webauthn\\\\StringStream constructor expects string, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/AttestationObjectDenormalizer.php
@@ -1061,27 +1021,7 @@ parameters:
 			path: src/webauthn/src/Denormalizer/AttestationObjectDenormalizer.php
 
 		-
-			message: "#^Parameter \\#2 \\$attStmt of static method Webauthn\\\\AttestationStatement\\\\AttestationObject\\:\\:create\\(\\) expects Webauthn\\\\AttestationStatement\\\\AttestationStatement, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AttestationObjectDenormalizer.php
-
-		-
-			message: "#^Parameter \\#3 \\$authData of static method Webauthn\\\\AttestationStatement\\\\AttestationObject\\:\\:create\\(\\) expects Webauthn\\\\AuthenticatorData, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AttestationObjectDenormalizer.php
-
-		-
 			message: "#^Cannot access offset 'fmt' on mixed\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AttestationStatementDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AttestationStatementDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AttestationStatementDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AttestationStatementDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/AttestationStatementDenormalizer.php
 
@@ -1096,49 +1036,9 @@ parameters:
 			path: src/webauthn/src/Denormalizer/AttestationStatementDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AttestedCredentialDataNormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AttestedCredentialDataNormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AttestedCredentialDataNormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AttestedCredentialDataNormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticationExtensionNormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticationExtensionNormalizer.php
-
-		-
 			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticationExtensionNormalizer\\:\\:normalize\\(\\) should return array but returns mixed\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/AuthenticationExtensionNormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticationExtensionNormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticationExtensionNormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticationExtensionsDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticationExtensionsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticationExtensionsDenormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticationExtensionsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticationExtensionsDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticationExtensionsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticationExtensionsDenormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticationExtensionsDenormalizer.php
 
 		-
 			message: "#^Cannot access offset 'attestationObject' on mixed\\.$#"
@@ -1166,21 +1066,6 @@ parameters:
 			path: src/webauthn/src/Denormalizer/AuthenticatorAssertionResponseDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticatorAssertionResponseDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorAssertionResponseDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticatorAssertionResponseDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorAssertionResponseDenormalizer.php
-
-		-
-			message: "#^Parameter \\#1 \\$clientDataJSON of static method Webauthn\\\\AuthenticatorAssertionResponse\\:\\:create\\(\\) expects Webauthn\\\\CollectedClientData, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorAssertionResponseDenormalizer.php
-
-		-
 			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\Util\\\\Base64\\:\\:decode\\(\\) expects string, mixed given\\.$#"
 			count: 3
 			path: src/webauthn/src/Denormalizer/AuthenticatorAssertionResponseDenormalizer.php
@@ -1191,17 +1076,7 @@ parameters:
 			path: src/webauthn/src/Denormalizer/AuthenticatorAssertionResponseDenormalizer.php
 
 		-
-			message: "#^Parameter \\#2 \\$authenticatorData of static method Webauthn\\\\AuthenticatorAssertionResponse\\:\\:create\\(\\) expects Webauthn\\\\AuthenticatorData, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorAssertionResponseDenormalizer.php
-
-		-
 			message: "#^Parameter \\#3 \\$signature of static method Webauthn\\\\AuthenticatorAssertionResponse\\:\\:create\\(\\) expects string, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorAssertionResponseDenormalizer.php
-
-		-
-			message: "#^Parameter \\#5 \\$attestationObject of static method Webauthn\\\\AuthenticatorAssertionResponse\\:\\:create\\(\\) expects Webauthn\\\\AttestationStatement\\\\AttestationObject\\|null, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/AuthenticatorAssertionResponseDenormalizer.php
 
@@ -1221,32 +1096,12 @@ parameters:
 			path: src/webauthn/src/Denormalizer/AuthenticatorAttestationResponseDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticatorAttestationResponseDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorAttestationResponseDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticatorAttestationResponseDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorAttestationResponseDenormalizer.php
-
-		-
-			message: "#^Parameter \\#1 \\$clientDataJSON of static method Webauthn\\\\AuthenticatorAttestationResponse\\:\\:create\\(\\) expects Webauthn\\\\CollectedClientData, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorAttestationResponseDenormalizer.php
-
-		-
 			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\Util\\\\Base64\\:\\:decode\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/AuthenticatorAttestationResponseDenormalizer.php
 
 		-
 			message: "#^Parameter \\#1 \\$encodedString of static method ParagonIE\\\\ConstantTime\\\\Base64\\:\\:decodeNoPadding\\(\\) expects string, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorAttestationResponseDenormalizer.php
-
-		-
-			message: "#^Parameter \\#2 \\$attestationObject of static method Webauthn\\\\AuthenticatorAttestationResponse\\:\\:create\\(\\) expects Webauthn\\\\AttestationStatement\\\\AttestationObject, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/AuthenticatorAttestationResponseDenormalizer.php
 
@@ -1258,16 +1113,6 @@ parameters:
 		-
 			message: "#^Cannot access offset 1 on array\\|false\\.$#"
 			count: 2
-			path: src/webauthn/src/Denormalizer/AuthenticatorDataDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticatorDataDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorDataDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticatorDataDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
 			path: src/webauthn/src/Denormalizer/AuthenticatorDataDenormalizer.php
 
 		-
@@ -1291,34 +1136,9 @@ parameters:
 			path: src/webauthn/src/Denormalizer/AuthenticatorDataDenormalizer.php
 
 		-
-			message: "#^Parameter \\#6 \\$extensions of static method Webauthn\\\\AuthenticatorData\\:\\:create\\(\\) expects Webauthn\\\\AuthenticationExtensions\\\\AuthenticationExtensions\\|null, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorDataDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticatorResponseDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorResponseDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\AuthenticatorResponseDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/AuthenticatorResponseDenormalizer.php
-
-		-
 			message: "#^Parameter \\#2 \\$array of function array_key_exists expects array, mixed given\\.$#"
 			count: 2
 			path: src/webauthn/src/Denormalizer/AuthenticatorResponseDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\CollectedClientDataDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/CollectedClientDataDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\CollectedClientDataDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/CollectedClientDataDenormalizer.php
 
 		-
 			message: "#^Parameter \\#1 \\$json of function json_decode expects string, mixed given\\.$#"
@@ -1336,44 +1156,24 @@ parameters:
 			path: src/webauthn/src/Denormalizer/CollectedClientDataDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\ExtensionDescriptorDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			message: "#^Only iterables can be unpacked, mixed given in argument \\#1\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/ExtensionDescriptorDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\ExtensionDescriptorDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			message: "#^Parameter \\#1 \\$id of static method Webauthn\\\\MetadataService\\\\Statement\\\\ExtensionDescriptor\\:\\:create\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/ExtensionDescriptorDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			message: "#^Parameter \\#2 \\$array of function array_key_exists expects array, mixed given\\.$#"
 			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialDenormalizer.php
+			path: src/webauthn/src/Denormalizer/ExtensionDescriptorDenormalizer.php
 
 		-
 			message: "#^Parameter \\#2 \\$array of function array_key_exists expects array, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialDenormalizer.php
-
-		-
-			message: "#^Parameter \\#3 \\$response of static method Webauthn\\\\PublicKeyCredential\\:\\:create\\(\\) expects Webauthn\\\\AuthenticatorResponse, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialDescriptorNormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialDescriptorNormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialDescriptorNormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialDescriptorNormalizer.php
 
 		-
 			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
@@ -1456,37 +1256,12 @@ parameters:
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialOptionsDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialOptionsDenormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialOptionsDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialOptionsDenormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
 			message: "#^Parameter \\#1 \\$challenge of static method Webauthn\\\\PublicKeyCredentialRequestOptions\\:\\:create\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
 
 		-
 			message: "#^Parameter \\#1 \\$encodedString of static method ParagonIE\\\\ConstantTime\\\\Base64\\:\\:decodeNoPadding\\(\\) expects string, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
-			message: "#^Parameter \\#1 \\$rp of static method Webauthn\\\\PublicKeyCredentialCreationOptions\\:\\:create\\(\\) expects Webauthn\\\\PublicKeyCredentialRpEntity, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
 
@@ -1501,32 +1276,12 @@ parameters:
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
 
 		-
-			message: "#^Parameter \\#2 \\$user of static method Webauthn\\\\PublicKeyCredentialCreationOptions\\:\\:create\\(\\) expects Webauthn\\\\PublicKeyCredentialUserEntity, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
-			message: "#^Parameter \\#3 \\$allowCredentials of static method Webauthn\\\\PublicKeyCredentialRequestOptions\\:\\:create\\(\\) expects array\\<Webauthn\\\\PublicKeyCredentialDescriptor\\>, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
 			message: "#^Parameter \\#3 \\$challenge of static method Webauthn\\\\PublicKeyCredentialCreationOptions\\:\\:create\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
 
 		-
-			message: "#^Parameter \\#4 \\$pubKeyCredParams of static method Webauthn\\\\PublicKeyCredentialCreationOptions\\:\\:create\\(\\) expects array\\<Webauthn\\\\PublicKeyCredentialParameters\\>, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
 			message: "#^Parameter \\#4 \\$userVerification of static method Webauthn\\\\PublicKeyCredentialRequestOptions\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
-			message: "#^Parameter \\#5 \\$authenticatorSelection of static method Webauthn\\\\PublicKeyCredentialCreationOptions\\:\\:create\\(\\) expects Webauthn\\\\AuthenticatorSelectionCriteria\\|null, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
 
@@ -1541,34 +1296,9 @@ parameters:
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
 
 		-
-			message: "#^Parameter \\#6 \\$extensions of static method Webauthn\\\\PublicKeyCredentialRequestOptions\\:\\:create\\(\\) expects array\\<Webauthn\\\\AuthenticationExtensions\\\\AuthenticationExtensions\\>\\|Webauthn\\\\AuthenticationExtensions\\\\AuthenticationExtensions\\|null, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
-			message: "#^Parameter \\#7 \\$excludeCredentials of static method Webauthn\\\\PublicKeyCredentialCreationOptions\\:\\:create\\(\\) expects array\\<Webauthn\\\\PublicKeyCredentialDescriptor\\>, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
 			message: "#^Parameter \\#8 \\$timeout of static method Webauthn\\\\PublicKeyCredentialCreationOptions\\:\\:create\\(\\) expects int\\<1, max\\>\\|null, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
-			message: "#^Parameter \\#9 \\$extensions of static method Webauthn\\\\PublicKeyCredentialCreationOptions\\:\\:create\\(\\) expects Webauthn\\\\AuthenticationExtensions\\\\AuthenticationExtensions\\|null, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialOptionsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialParametersDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialParametersDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialParametersDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialParametersDenormalizer.php
 
 		-
 			message: "#^Parameter \\#2 \\$array of function array_key_exists expects array, mixed given\\.$#"
@@ -1641,26 +1371,6 @@ parameters:
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialSourceDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialSourceDenormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialSourceDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialSourceDenormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
-
-		-
 			message: "#^Parameter \\#1 \\$data of static method Webauthn\\\\Util\\\\Base64\\:\\:decode\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
@@ -1716,11 +1426,6 @@ parameters:
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
 
 		-
-			message: "#^Parameter \\#5 \\$trustPath of static method Webauthn\\\\PublicKeyCredentialSource\\:\\:create\\(\\) expects Webauthn\\\\TrustPath\\\\TrustPath, mixed given\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
-
-		-
 			message: "#^Parameter \\#7 \\$credentialPublicKey of static method Webauthn\\\\PublicKeyCredentialSource\\:\\:create\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
@@ -1736,26 +1441,6 @@ parameters:
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialSourceDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialUserEntityDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialUserEntityDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialUserEntityDenormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialUserEntityDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialUserEntityDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialUserEntityDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\PublicKeyCredentialUserEntityDenormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/PublicKeyCredentialUserEntityDenormalizer.php
-
-		-
 			message: "#^Parameter \\#2 \\$array of function array_key_exists expects array, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/PublicKeyCredentialUserEntityDenormalizer.php
@@ -1766,42 +1451,12 @@ parameters:
 			path: src/webauthn/src/Denormalizer/TrustPathDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\TrustPathDenormalizer\\:\\:denormalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/TrustPathDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\TrustPathDenormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/TrustPathDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\TrustPathDenormalizer\\:\\:supportsDenormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/TrustPathDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\TrustPathDenormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/TrustPathDenormalizer.php
-
-		-
 			message: "#^Parameter \\#2 \\$array of function array_key_exists expects array, mixed given\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/TrustPathDenormalizer.php
 
 		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) should return array\\<Webauthn\\\\MetadataService\\\\Statement\\\\VerificationMethodDescriptor\\> but returns array\\<array\\|ArrayObject\\|bool\\|float\\|int\\|string\\|null\\>\\.$#"
-			count: 1
-			path: src/webauthn/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
-
-		-
-			message: "#^Method Webauthn\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:supportsNormalization\\(\\) has parameter \\$context with no value type specified in iterable type array\\.$#"
+			message: "#^Method Webauthn\\\\Denormalizer\\\\VerificationMethodANDCombinationsDenormalizer\\:\\:normalize\\(\\) should return array\\<Webauthn\\\\MetadataService\\\\Statement\\\\VerificationMethodDescriptor\\> but returns array\\<array\\|ArrayObject\\<\\(int\\|string\\), mixed\\>\\|bool\\|float\\|int\\|string\\|null\\>\\.$#"
 			count: 1
 			path: src/webauthn/src/Denormalizer/VerificationMethodANDCombinationsDenormalizer.php
 
