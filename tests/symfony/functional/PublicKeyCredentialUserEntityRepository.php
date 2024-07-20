@@ -55,7 +55,7 @@ final readonly class PublicKeyCredentialUserEntityRepository implements PublicKe
     public function saveUserEntity(PublicKeyCredentialUserEntity $userEntity): void
     {
         if (! $userEntity instanceof User) {
-            $userEntity = User::create($userEntity->name, $userEntity->id, $userEntity->displayName, $userEntity->icon);
+            $userEntity = User::create($userEntity->name, $userEntity->id, $userEntity->displayName);
         }
 
         $item = $this->cacheItemPool->getItem('user-id' . Base64UrlSafe::encodeUnpadded($userEntity->id));

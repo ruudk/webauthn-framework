@@ -159,7 +159,6 @@ webauthn:
       rp:
         name: 'My other application'
         id: 'localhost'
-        icon: null
       challenge_length: 32
       authenticator_selection_criteria:
         authenticator_attachment: !php/const Webauthn\AuthenticatorSelectionCriteria::AUTHENTICATOR_ATTACHMENT_NO_PREFERENCE

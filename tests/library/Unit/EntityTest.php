@@ -18,14 +18,13 @@ final class EntityTest extends AbstractTestCase
     #[Test]
     public function anPublicKeyCredentialUserEntityCanBeCreatedAndValueAccessed(): void
     {
-        $user = PublicKeyCredentialUserEntity::create('name', 'id', 'display_name', 'icon');
+        $user = PublicKeyCredentialUserEntity::create('name', 'id', 'display_name');
 
         static::assertSame('name', $user->name);
         static::assertSame('display_name', $user->displayName);
-        static::assertSame('icon', $user->icon);
         static::assertSame('id', $user->id);
         static::assertSame(
-            '{"id":"aWQ","name":"name","displayName":"display_name","icon":"icon"}',
+            '{"id":"aWQ","name":"name","displayName":"display_name"}',
             $this->getSerializer()
                 ->serialize($user, 'json', [
                     AbstractObjectNormalizer::SKIP_NULL_VALUES => true,
@@ -36,12 +35,11 @@ final class EntityTest extends AbstractTestCase
     #[Test]
     public function anPublicKeyCredentialRpEntityCanBeCreatedAndValueAccessed(): void
     {
-        $rp = PublicKeyCredentialRpEntity::create('name', 'id', 'icon');
+        $rp = PublicKeyCredentialRpEntity::create('name', 'id');
 
         static::assertSame('name', $rp->name);
-        static::assertSame('icon', $rp->icon);
         static::assertSame('id', $rp->id);
-        static::assertSame('{"id":"id","name":"name","icon":"icon"}', $this->getSerializer()->serialize($rp, 'json', [
+        static::assertSame('{"id":"id","name":"name"}', $this->getSerializer()->serialize($rp, 'json', [
             AbstractObjectNormalizer::SKIP_NULL_VALUES => true,
         ]));
     }
