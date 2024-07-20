@@ -15,6 +15,7 @@ jobs:
         with:
           php-version: "8.3"
           extensions: "ctype, curl, dom, json, libxml, mbstring, openssl, phar, simplexml, sodium, tokenizer, xml, xmlwriter, zlib"
+          tools: "castor"
           coverage: "xdebug"
 
       - name: "Checkout code"
@@ -30,4 +31,4 @@ jobs:
           composer-options: "--optimize-autoloader"
 
       - name: "Execute Infection"
-        run: "make ci-mu"
+        run: "castor infect"
