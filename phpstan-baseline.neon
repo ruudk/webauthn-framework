@@ -546,11 +546,6 @@ parameters:
 			path: src/symfony/src/Service/PublicKeyCredentialCreationOptionsFactory.php
 
 		-
-			message: "#^Cannot access offset 'icon' on mixed\\.$#"
-			count: 1
-			path: src/symfony/src/Service/PublicKeyCredentialCreationOptionsFactory.php
-
-		-
 			message: "#^Cannot access offset 'id' on mixed\\.$#"
 			count: 1
 			path: src/symfony/src/Service/PublicKeyCredentialCreationOptionsFactory.php
@@ -632,11 +627,6 @@ parameters:
 
 		-
 			message: "#^Parameter \\#2 \\$userVerification of static method Webauthn\\\\AuthenticatorSelectionCriteria\\:\\:create\\(\\) expects string, mixed given\\.$#"
-			count: 1
-			path: src/symfony/src/Service/PublicKeyCredentialCreationOptionsFactory.php
-
-		-
-			message: "#^Parameter \\#3 \\$icon of static method Webauthn\\\\PublicKeyCredentialRpEntity\\:\\:create\\(\\) expects string\\|null, mixed given\\.$#"
 			count: 1
 			path: src/symfony/src/Service/PublicKeyCredentialCreationOptionsFactory.php
 
