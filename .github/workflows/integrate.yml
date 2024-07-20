@@ -32,6 +32,7 @@ jobs:
         with:
           php-version: "8.3"
           coverage: "none"
+          tools: "castor"
 
       - name: "Checkout code"
         uses: "actions/checkout@v4"
@@ -42,7 +43,7 @@ jobs:
           dependency-versions: "highest"
 
       - name: "Check source code for syntax errors"
-        run: "composer exec -- parallel-lint src/ tests/"
+        run: "castor lint"
 
   php_tests:
     name: "2️⃣ Unit and functional tests"
@@ -66,6 +67,7 @@ jobs:
         with:
           php-version: "${{ matrix.php-version }}"
           extensions: "ctype, curl, dom, json, libxml, mbstring, openssl, phar, simplexml, sodium, tokenizer, xml, xmlwriter, zlib"
+          tools: "castor"
           coverage: "xdebug"
 
       - name: "Checkout code"
@@ -80,10 +82,7 @@ jobs:
           composer-options: "--optimize-autoloader"
 
       - name: "Execute tests (PHP)"
-        run: "make ci-cc"
-
-      - name: "Fix code coverage paths"
-        run: sed -i 's@'$GITHUB_WORKSPACE'@/github/workspace/@g' coverage.xml
+        run: "castor test"
 
   js_tests:
     name: "2️⃣ JS tests"
@@ -103,6 +102,7 @@ jobs:
         with:
           php-version: "${{ matrix.php-version }}"
           extensions: "ctype, curl, dom, json, libxml, mbstring, openssl, phar, simplexml, sodium, tokenizer, xml, xmlwriter, zlib"
+          tools: "castor"
           coverage: "xdebug"
 
       - name: "Checkout code"
@@ -117,7 +117,7 @@ jobs:
           composer-options: "--optimize-autoloader"
 
       - name: "Execute tests (JS)"
-        run: "make js"
+        run: "castor js"
 
   static_analysis:
     name: "3️⃣ Static Analysis"
@@ -131,6 +131,7 @@ jobs:
         with:
           php-version: "8.3"
           extensions: "ctype, curl, dom, json, libxml, mbstring, openssl, phar, simplexml, sodium, tokenizer, xml, xmlwriter, zlib"
+          tools: "castor"
           coverage: "none"
 
       - name: "Checkout code"
@@ -149,7 +150,7 @@ jobs:
         run: "composer dump-autoload --optimize --strict-psr"
 
       - name: "Execute static analysis"
-        run: "make st"
+        run: "castor stan"
 
   coding_standards:
     name: "4️⃣ Coding Standards"
@@ -163,6 +164,7 @@ jobs:
         with:
           php-version: "8.3"
           extensions: "ctype, curl, dom, json, libxml, mbstring, openssl, phar, simplexml, sodium, tokenizer, xml, xmlwriter, zlib"
+          tools: "castor"
           coverage: "none"
 
       - name: "Checkout code"
@@ -181,11 +183,10 @@ jobs:
           composer-options: "--optimize-autoloader"
 
       - name: "Check coding style"
-        run: "make ci-cs"
+        run: "castor cs"
 
       - name: "Deptrac"
-        run: |
-          vendor/bin/deptrac analyse --fail-on-uncovered --no-cache
+        run: "castor deptrac"
 
   rector_checkstyle:
     name: "6️⃣ Rector Checkstyle"
@@ -199,6 +200,7 @@ jobs:
         with:
           php-version: "8.3"
           extensions: "ctype, curl, dom, json, libxml, mbstring, openssl, phar, simplexml, sodium, tokenizer, xml, xmlwriter, zlib"
+          tools: "castor"
           coverage: "xdebug"
 
       - name: "Checkout code"
@@ -214,7 +216,7 @@ jobs:
           composer-options: "--optimize-autoloader"
 
       - name: "Execute Rector"
-        run: "make rector"
+        run: "castor rector"
 
   exported_files:
     name: "7️⃣ Exported files"

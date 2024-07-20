@@ -89,5 +89,7 @@ return static function (ECSConfig $config): void {
     ]);
 
     $config->parallel();
-    $config->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/ecs.php', __DIR__ . '/rector.php']);
+    $config->paths(
+        [__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/ecs.php', __DIR__ . '/rector.php', __DIR__ . '/castor.php']
+    );
 };
