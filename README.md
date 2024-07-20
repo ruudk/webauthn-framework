@@ -2,10 +2,10 @@
 
 ![Build Status](https://github.com/web-auth/webauthn-framework/workflows/Integrate/badge.svg)
 
-[![Latest Stable Version](https://poser.pugx.org/web-auth/webauthn-framework/v/stable.png)](https://packagist.org/packages/web-auth/webauthn-framework)
-[![Total Downloads](https://poser.pugx.org/web-auth/webauthn-framework/downloads.png)](https://packagist.org/packages/web-auth/webauthn-framework)
-[![Latest Unstable Version](https://poser.pugx.org/web-auth/webauthn-framework/v/unstable.png)](https://packagist.org/packages/web-auth/webauthn-framework)
-[![License](https://poser.pugx.org/web-auth/webauthn-framework/license.png)](https://packagist.org/packages/web-auth/webauthn-framework)
+[![Latest Stable Version](https://poser.pugx.org/web-auth/webauthn-framework/v/stable)](https://packagist.org/packages/web-auth/webauthn-framework)
+[![Total Downloads](https://poser.pugx.org/web-auth/webauthn-framework/downloads)](https://packagist.org/packages/web-auth/webauthn-framework)
+[![Latest Unstable Version](https://poser.pugx.org/web-auth/webauthn-framework/v/unstable)](https://packagist.org/packages/web-auth/webauthn-framework)
+[![License](https://poser.pugx.org/web-auth/webauthn-framework/license)](https://packagist.org/packages/web-auth/webauthn-framework)
 
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/web-auth/webauthn-framework/badge)](https://api.securityscorecards.dev/projects/github.com/web-auth/webauthn-framework)
 
