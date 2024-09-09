@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Webauthn;
 
+use Cose\Algorithms;
 use InvalidArgumentException;
 use Webauthn\AuthenticationExtensions\AuthenticationExtensions;
 use Webauthn\Exception\InvalidDataException;
@@ -59,6 +60,16 @@ final class PublicKeyCredentialCreationOptions extends PublicKeyCredentialOption
             $attestation,
             'Invalid attestation conveyance mode'
         );
+
+        if (count($this->pubKeyCredParams) === 0) {
+            // set default algorithms
+            // see https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams
+            $this->pubKeyCredParams = [
+                PublicKeyCredentialParameters::createPk(Algorithms::COSE_ALGORITHM_EDDSA),
+                PublicKeyCredentialParameters::createPk(Algorithms::COSE_ALGORITHM_ES256),
+                PublicKeyCredentialParameters::createPk(Algorithms::COSE_ALGORITHM_RS256),
+            ];
+        }
 
         parent::__construct($challenge, $timeout, $extensions);
     }

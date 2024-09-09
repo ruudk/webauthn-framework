@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Webauthn\Tests\Unit;
 
+use Cose\Algorithms;
 use PHPUnit\Framework\Attributes\Test;
 use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 use Webauthn\PublicKeyCredentialCreationOptions;
@@ -99,5 +100,29 @@ final class PublicKeyCredentialCreationOptionsTest extends AbstractTestCase
                 AbstractObjectNormalizer::SKIP_NULL_VALUES => true,
             ]);
         static::assertSame([], $data->excludeCredentials);
+    }
+
+    #[Test]
+    public function aPublicKeyCredentialCreationOptionsIsCreatedWithDefaultAlgorithms(): void
+    {
+        $rp = PublicKeyCredentialRpEntity::create('RP');
+        $user = PublicKeyCredentialUserEntity::create('USER', 'id', 'FOO BAR');
+
+        $options = PublicKeyCredentialCreationOptions::create(
+            $rp,
+            $user,
+            'challenge',
+        );
+
+        $actualAlgorithms = [];
+        foreach ($options->pubKeyCredParams as $pubKeyCredParam) {
+            $actualAlgorithms[] = $pubKeyCredParam->alg;
+        }
+
+        static::assertSame([
+            Algorithms::COSE_ALGORITHM_EDDSA,
+            Algorithms::COSE_ALGORITHM_ES256,
+            Algorithms::COSE_ALGORITHM_RS256,
+        ], $actualAlgorithms);
     }
 }
