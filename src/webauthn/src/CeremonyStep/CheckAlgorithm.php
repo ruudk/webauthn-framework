@@ -19,6 +19,7 @@ use Webauthn\U2FPublicKey;
 use function count;
 use function in_array;
 use function is_array;
+use function sprintf;
 
 class CheckAlgorithm implements CeremonyStep
 {
